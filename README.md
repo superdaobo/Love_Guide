@@ -1,15 +1,15 @@
-# 💕 恋爱关系管理系统
+# 💕 Love Guide - 恋爱关系管理系统
 
 一个专业的恋爱关系管理应用，帮助你更好地经营感情。
 
 ## ✨ 功能特点
 
-- **💝 增进感情方法** - 收集和整理让感情升温的方法
-- **📝 交流案例** - 记录美好的交流瞬间，积累经验
-- **⚠️ 注意事项** - 记住重要的事情，避免踩雷
-- **⏰ 倒数日** - 不要错过任何重要的日子
-- **🤖 AI助手** - 智能恋爱顾问帮你解答困惑
-- **📱 移动端优化** - 完美适配 iOS 和 Android
+- **💝 增进感情方法** - 400+ 方法让感情升温
+- **📝 交流案例** - 100+ 真实案例积累经验
+- **⚠️ 注意事项** - 100+ 避雷指南
+- **⏰ 倒数日** - 重要日期提醒
+- **🤖 AI助手** - 智能恋爱顾问
+- **📱 移动端优化** - 完美适配 iOS/Android
 
 ## 🚀 快速开始
 
@@ -28,29 +28,17 @@ npm start
 ### 构建 iOS 应用
 
 ```bash
-# 初始化 Capacitor
 npm run cap:init
-
-# 添加 iOS 平台
 npm run cap:add:ios
-
-# 同步到 iOS
 npm run build:ios
-
-# 打开 Xcode
 npm run cap:open:ios
 ```
 
 ### 构建 Android 应用
 
 ```bash
-# 添加 Android 平台
 npm run cap:add:android
-
-# 同步到 Android
 npm run build:android
-
-# 打开 Android Studio
 npm run cap:open:android
 ```
 
