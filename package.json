@@ -1,6 +1,6 @@
 {
   "name": "love-relationship-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "专业的女朋友关系管理应用",
   "main": "server.js",
   "scripts": {

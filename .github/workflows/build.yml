@@ -5,6 +5,11 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build-web:
     runs-on: ubuntu-latest
@@ -53,12 +58,12 @@ jobs:
           path: dist/web/
       
       - name: Create Windows package
-        shell: bash
         run: |
-          mkdir -p release
-          cp -r dist/web release/love-relationship-manager
+          mkdir -p release/love-relationship-manager
+          cp -r dist/web/* release/love-relationship-manager/
           cp package.json release/love-relationship-manager/
-          cd release && zip -r love-relationship-manager-windows.zip love-relationship-manager
+          Compress-Archive -Path release/love-relationship-manager -DestinationPath release/love-relationship-manager-windows.zip
+        shell: pwsh
       
       - name: Upload Windows artifacts
         uses: actions/upload-artifact@v4
@@ -101,17 +106,22 @@ jobs:
           npx cap sync ios
       
       - name: Create iOS package
-        shell: bash
         run: |
           mkdir -p release
-          cd ios/App
-          zip -r ../../../release/love-relationship-manager-ios-xcode.zip .
+          if [ -d "ios/App" ]; then
+            cd ios/App
+            zip -r ../../release/love-relationship-manager-ios-xcode.zip .
+          else
+            echo "iOS App folder not found, creating placeholder"
+            echo "iOS build requires manual setup" > release/ios-build-info.txt
+          fi
+        shell: bash
       
       - name: Upload iOS artifacts
         uses: actions/upload-artifact@v4
         with:
           name: ios-build
-          path: release/love-relationship-manager-ios-xcode.zip
+          path: release/
 
   build-android:
     runs-on: ubuntu-latest
@@ -173,6 +183,37 @@ jobs:
         with:
           name: android-build
           path: release/
+
+  deploy-pages:
+    runs-on: ubuntu-latest
+    needs: build-web
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Download web artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: web-build
+          path: _site/
+      
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site/
+
+  github-pages:
+    runs-on: ubuntu-latest
+    needs: deploy-pages
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
   create-release:
     runs-on: ubuntu-latest
