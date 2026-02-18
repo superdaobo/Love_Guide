@@ -1,38 +1,27 @@
-const { createApp, ref, computed, onMounted, nextTick, watch } = Vue;
+const { createApp, ref, computed, onMounted, nextTick } = Vue;
 
-const USE_LOCAL_STORAGE = !window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1');
+const USE_API = window.location.hostname.includes('localhost') || window.location.hostname.includes('127.0.0.1');
 
-const defaultMethods = [
-    { id: 1, title: '一起做饭', description: '一起下厨做一顿美食，增进感情', category: '日常', difficulty: '简单', created_at: new Date().toISOString() },
-    { id: 2, title: '看电影', description: '一起看一部浪漫电影，分享感受', category: '娱乐', difficulty: '简单', created_at: new Date().toISOString() },
-    { id: 3, title: '周末旅行', description: '计划一次周末小旅行，创造美好回忆', category: '出行', difficulty: '中等', created_at: new Date().toISOString() },
-    { id: 4, title: '写情书', description: '亲手写一封情书，表达爱意', category: '浪漫', difficulty: '简单', created_at: new Date().toISOString() },
-    { id: 5, title: '学习新技能', description: '一起学习一项新技能，共同成长', category: '成长', difficulty: '中等', created_at: new Date().toISOString() }
-];
+let DEFAULT_DATA = null;
 
-const defaultCases = [
-    { id: 1, title: '第一次约会', content: '选择一个安静舒适的咖啡厅，聊聊彼此的兴趣爱好...', date: '2024-01-15', mood: '开心', created_at: new Date().toISOString() },
-    { id: 2, title: '生日惊喜', content: '准备了一个小惊喜派对，邀请了她最好的朋友...', date: '2024-02-20', mood: '感动', created_at: new Date().toISOString() }
-];
+async function loadDefaultData() {
+    if (DEFAULT_DATA) return DEFAULT_DATA;
+    try {
+        const response = await fetch('default-data.json');
+        DEFAULT_DATA = await response.json();
+        return DEFAULT_DATA;
+    } catch (e) {
+        console.error('加载默认数据失败:', e);
+        return { methods: [], cases: [], notes: [], countdowns: [] };
+    }
+}
 
-const defaultNotes = [
-    { id: 1, title: '记住重要日期', content: '生日、纪念日等重要日期一定要记住', priority: '高', created_at: new Date().toISOString() },
-    { id: 2, title: '倾听很重要', content: '当她说话时，认真倾听，不要打断', priority: '高', created_at: new Date().toISOString() },
-    { id: 3, title: '小惊喜', content: '偶尔准备一些小惊喜，不需要太贵重', priority: '中', created_at: new Date().toISOString() }
-];
-
-const defaultCountdowns = [
-    { id: 1, name: '恋爱纪念日', date: '2024-06-15', type: 'anniversary', created_at: new Date().toISOString() },
-    { id: 2, name: '她的生日', date: '2024-08-20', type: 'birthday', created_at: new Date().toISOString() },
-    { id: 3, name: '下次约会', date: '2024-03-10', type: 'date', created_at: new Date().toISOString() }
-];
-
-function getLocalData(key, defaultValue) {
+function getLocalData(key) {
     try {
         const data = localStorage.getItem(key);
-        return data ? JSON.parse(data) : defaultValue;
+        return data ? JSON.parse(data) : null;
     } catch (e) {
-        return defaultValue;
+        return null;
     }
 }
 
@@ -158,9 +147,7 @@ createApp({
         };
 
         const loadStats = async () => {
-            if (USE_LOCAL_STORAGE) {
-                calculateStats();
-            } else {
+            if (USE_API) {
                 try {
                     const response = await axios.get('/api/stats');
                     stats.value = response.data;
@@ -168,70 +155,89 @@ createApp({
                     console.error('加载统计数据失败:', error);
                     calculateStats();
                 }
+            } else {
+                calculateStats();
             }
         };
 
         const loadMethods = async () => {
-            if (USE_LOCAL_STORAGE) {
-                methods.value = getLocalData('love_methods', defaultMethods);
-            } else {
+            if (USE_API) {
                 try {
                     const response = await axios.get('/api/methods');
                     methods.value = response.data;
                 } catch (error) {
                     console.error('加载方法失败:', error);
-                    methods.value = getLocalData('love_methods', defaultMethods);
+                }
+            } else {
+                const saved = getLocalData('love_methods');
+                if (saved) {
+                    methods.value = saved;
+                } else {
+                    const defaultData = await loadDefaultData();
+                    methods.value = defaultData.methods || [];
                 }
             }
         };
 
         const loadCases = async () => {
-            if (USE_LOCAL_STORAGE) {
-                cases.value = getLocalData('love_cases', defaultCases);
-            } else {
+            if (USE_API) {
                 try {
                     const response = await axios.get('/api/cases');
                     cases.value = response.data;
                 } catch (error) {
                     console.error('加载案例失败:', error);
-                    cases.value = getLocalData('love_cases', defaultCases);
+                }
+            } else {
+                const saved = getLocalData('love_cases');
+                if (saved) {
+                    cases.value = saved;
+                } else {
+                    const defaultData = await loadDefaultData();
+                    cases.value = defaultData.cases || [];
                 }
             }
         };
 
         const loadNotes = async () => {
-            if (USE_LOCAL_STORAGE) {
-                notes.value = getLocalData('love_notes', defaultNotes);
-            } else {
+            if (USE_API) {
                 try {
                     const response = await axios.get('/api/notes');
                     notes.value = response.data;
                 } catch (error) {
                     console.error('加载注意事项失败:', error);
-                    notes.value = getLocalData('love_notes', defaultNotes);
+                }
+            } else {
+                const saved = getLocalData('love_notes');
+                if (saved) {
+                    notes.value = saved;
+                } else {
+                    const defaultData = await loadDefaultData();
+                    notes.value = defaultData.notes || [];
                 }
             }
         };
 
         const loadCountdowns = async () => {
-            if (USE_LOCAL_STORAGE) {
-                countdowns.value = getLocalData('love_countdowns', defaultCountdowns);
-            } else {
+            if (USE_API) {
                 try {
                     const response = await axios.get('/api/countdowns');
                     countdowns.value = response.data;
                 } catch (error) {
                     console.error('加载倒数日失败:', error);
-                    countdowns.value = getLocalData('love_countdowns', defaultCountdowns);
+                }
+            } else {
+                const saved = getLocalData('love_countdowns');
+                if (saved) {
+                    countdowns.value = saved;
+                } else {
+                    const defaultData = await loadDefaultData();
+                    countdowns.value = defaultData.countdowns || [];
                 }
             }
         };
 
         const loadAIConfig = async () => {
-            if (USE_LOCAL_STORAGE) {
-                const saved = getLocalData('love_ai_config', null);
-                if (saved) aiConfig.value = saved;
-            } else {
+            if (USE_API) {
                 try {
                     const response = await axios.get('/api/ai-config');
                     if (response.data) {
@@ -240,20 +246,23 @@ createApp({
                 } catch (error) {
                     console.error('加载AI配置失败:', error);
                 }
+            } else {
+                const saved = getLocalData('love_ai_config');
+                if (saved) aiConfig.value = saved;
             }
         };
 
         const loadChatHistory = async () => {
-            if (USE_LOCAL_STORAGE) {
-                chatHistory.value = getLocalData('love_chat_history', []);
-            } else {
+            if (USE_API) {
                 try {
                     const response = await axios.get('/api/chat-history');
                     chatHistory.value = response.data;
                 } catch (error) {
                     console.error('加载聊天记录失败:', error);
-                    chatHistory.value = getLocalData('love_chat_history', []);
                 }
+            } else {
+                const saved = getLocalData('love_chat_history');
+                if (saved) chatHistory.value = saved;
             }
         };
 
@@ -284,7 +293,16 @@ createApp({
                 return;
             }
             try {
-                if (USE_LOCAL_STORAGE) {
+                if (USE_API) {
+                    if (editingMethod.value) {
+                        await axios.put(`/api/methods/${editingMethod.value.id}`, methodForm.value);
+                        showToast('方法更新成功');
+                    } else {
+                        await axios.post('/api/methods', methodForm.value);
+                        showToast('方法添加成功');
+                    }
+                    await loadMethods();
+                } else {
                     if (editingMethod.value) {
                         const index = methods.value.findIndex(m => m.id === editingMethod.value.id);
                         if (index !== -1) {
@@ -299,15 +317,6 @@ createApp({
                     }
                     setLocalData('love_methods', methods.value);
                     showToast(editingMethod.value ? '方法更新成功' : '方法添加成功');
-                } else {
-                    if (editingMethod.value) {
-                        await axios.put(`/api/methods/${editingMethod.value.id}`, methodForm.value);
-                        showToast('方法更新成功');
-                    } else {
-                        await axios.post('/api/methods', methodForm.value);
-                        showToast('方法添加成功');
-                    }
-                    await loadMethods();
                 }
                 closeMethodModal();
                 loadStats();
@@ -319,14 +328,14 @@ createApp({
         const deleteMethod = async (id) => {
             if (!confirm('确定要删除这个方法吗？')) return;
             try {
-                if (USE_LOCAL_STORAGE) {
-                    methods.value = methods.value.filter(m => m.id !== id);
-                    setLocalData('love_methods', methods.value);
-                    showToast('方法已删除');
-                } else {
+                if (USE_API) {
                     await axios.delete(`/api/methods/${id}`);
                     showToast('方法已删除');
                     await loadMethods();
+                } else {
+                    methods.value = methods.value.filter(m => m.id !== id);
+                    setLocalData('love_methods', methods.value);
+                    showToast('方法已删除');
                 }
                 loadStats();
             } catch (error) {
@@ -357,7 +366,16 @@ createApp({
             }
             try {
                 const date = new Date().toISOString().split('T')[0];
-                if (USE_LOCAL_STORAGE) {
+                if (USE_API) {
+                    if (editingCase.value) {
+                        await axios.put(`/api/cases/${editingCase.value.id}`, caseForm.value);
+                        showToast('案例更新成功');
+                    } else {
+                        await axios.post('/api/cases', caseForm.value);
+                        showToast('案例添加成功');
+                    }
+                    await loadCases();
+                } else {
                     if (editingCase.value) {
                         const index = cases.value.findIndex(c => c.id === editingCase.value.id);
                         if (index !== -1) {
@@ -373,15 +391,6 @@ createApp({
                     }
                     setLocalData('love_cases', cases.value);
                     showToast(editingCase.value ? '案例更新成功' : '案例添加成功');
-                } else {
-                    if (editingCase.value) {
-                        await axios.put(`/api/cases/${editingCase.value.id}`, caseForm.value);
-                        showToast('案例更新成功');
-                    } else {
-                        await axios.post('/api/cases', caseForm.value);
-                        showToast('案例添加成功');
-                    }
-                    await loadCases();
                 }
                 closeCaseModal();
                 loadStats();
@@ -393,14 +402,14 @@ createApp({
         const deleteCase = async (id) => {
             if (!confirm('确定要删除这个案例吗？')) return;
             try {
-                if (USE_LOCAL_STORAGE) {
-                    cases.value = cases.value.filter(c => c.id !== id);
-                    setLocalData('love_cases', cases.value);
-                    showToast('案例已删除');
-                } else {
+                if (USE_API) {
                     await axios.delete(`/api/cases/${id}`);
                     showToast('案例已删除');
                     await loadCases();
+                } else {
+                    cases.value = cases.value.filter(c => c.id !== id);
+                    setLocalData('love_cases', cases.value);
+                    showToast('案例已删除');
                 }
                 loadStats();
             } catch (error) {
@@ -430,7 +439,16 @@ createApp({
                 return;
             }
             try {
-                if (USE_LOCAL_STORAGE) {
+                if (USE_API) {
+                    if (editingNote.value) {
+                        await axios.put(`/api/notes/${editingNote.value.id}`, noteForm.value);
+                        showToast('注意事项更新成功');
+                    } else {
+                        await axios.post('/api/notes', noteForm.value);
+                        showToast('注意事项添加成功');
+                    }
+                    await loadNotes();
+                } else {
                     if (editingNote.value) {
                         const index = notes.value.findIndex(n => n.id === editingNote.value.id);
                         if (index !== -1) {
@@ -445,15 +463,6 @@ createApp({
                     }
                     setLocalData('love_notes', notes.value);
                     showToast(editingNote.value ? '注意事项更新成功' : '注意事项添加成功');
-                } else {
-                    if (editingNote.value) {
-                        await axios.put(`/api/notes/${editingNote.value.id}`, noteForm.value);
-                        showToast('注意事项更新成功');
-                    } else {
-                        await axios.post('/api/notes', noteForm.value);
-                        showToast('注意事项添加成功');
-                    }
-                    await loadNotes();
                 }
                 closeNoteModal();
                 loadStats();
@@ -465,14 +474,14 @@ createApp({
         const deleteNote = async (id) => {
             if (!confirm('确定要删除这个注意事项吗？')) return;
             try {
-                if (USE_LOCAL_STORAGE) {
-                    notes.value = notes.value.filter(n => n.id !== id);
-                    setLocalData('love_notes', notes.value);
-                    showToast('注意事项已删除');
-                } else {
+                if (USE_API) {
                     await axios.delete(`/api/notes/${id}`);
                     showToast('注意事项已删除');
                     await loadNotes();
+                } else {
+                    notes.value = notes.value.filter(n => n.id !== id);
+                    setLocalData('love_notes', notes.value);
+                    showToast('注意事项已删除');
                 }
                 loadStats();
             } catch (error) {
@@ -506,7 +515,16 @@ createApp({
                 return;
             }
             try {
-                if (USE_LOCAL_STORAGE) {
+                if (USE_API) {
+                    if (editingCountdown.value) {
+                        await axios.put(`/api/countdowns/${editingCountdown.value.id}`, countdownForm.value);
+                        showToast('倒数日更新成功');
+                    } else {
+                        await axios.post('/api/countdowns', countdownForm.value);
+                        showToast('倒数日添加成功');
+                    }
+                    await loadCountdowns();
+                } else {
                     if (editingCountdown.value) {
                         const index = countdowns.value.findIndex(c => c.id === editingCountdown.value.id);
                         if (index !== -1) {
@@ -521,15 +539,6 @@ createApp({
                     }
                     setLocalData('love_countdowns', countdowns.value);
                     showToast(editingCountdown.value ? '倒数日更新成功' : '倒数日添加成功');
-                } else {
-                    if (editingCountdown.value) {
-                        await axios.put(`/api/countdowns/${editingCountdown.value.id}`, countdownForm.value);
-                        showToast('倒数日更新成功');
-                    } else {
-                        await axios.post('/api/countdowns', countdownForm.value);
-                        showToast('倒数日添加成功');
-                    }
-                    await loadCountdowns();
                 }
                 closeCountdownModal();
                 loadStats();
@@ -541,14 +550,14 @@ createApp({
         const deleteCountdown = async (id) => {
             if (!confirm('确定要删除这个倒数日吗？')) return;
             try {
-                if (USE_LOCAL_STORAGE) {
-                    countdowns.value = countdowns.value.filter(c => c.id !== id);
-                    setLocalData('love_countdowns', countdowns.value);
-                    showToast('倒数日已删除');
-                } else {
+                if (USE_API) {
                     await axios.delete(`/api/countdowns/${id}`);
                     showToast('倒数日已删除');
                     await loadCountdowns();
+                } else {
+                    countdowns.value = countdowns.value.filter(c => c.id !== id);
+                    setLocalData('love_countdowns', countdowns.value);
+                    showToast('倒数日已删除');
                 }
                 loadStats();
             } catch (error) {
@@ -558,11 +567,11 @@ createApp({
 
         const saveAIConfig = async () => {
             try {
-                if (USE_LOCAL_STORAGE) {
-                    setLocalData('love_ai_config', aiConfig.value);
+                if (USE_API) {
+                    await axios.post('/api/ai-config', aiConfig.value);
                     showToast('AI配置保存成功');
                 } else {
-                    await axios.post('/api/ai-config', aiConfig.value);
+                    setLocalData('love_ai_config', aiConfig.value);
                     showToast('AI配置保存成功');
                 }
             } catch (error) {
@@ -586,14 +595,14 @@ createApp({
             isTyping.value = true;
             
             try {
-                if (USE_LOCAL_STORAGE) {
-                    await new Promise(resolve => setTimeout(resolve, 500));
-                    const reply = '抱歉，AI 功能需要服务器支持。请在本地运行服务器后使用此功能。\n\n或者配置您的 API Key 后刷新页面重试。';
-                    chatHistory.value.push({ role: 'assistant', content: reply });
-                    setLocalData('love_chat_history', chatHistory.value);
-                } else {
+                if (USE_API) {
                     const response = await axios.post('/api/ai-chat', { message });
                     chatHistory.value.push({ role: 'assistant', content: response.data.reply });
+                } else {
+                    await new Promise(resolve => setTimeout(resolve, 500));
+                    const reply = '抱歉，AI 功能需要服务器支持。请在本地运行服务器后使用此功能。';
+                    chatHistory.value.push({ role: 'assistant', content: reply });
+                    setLocalData('love_chat_history', chatHistory.value);
                 }
                 
                 await nextTick();
@@ -612,13 +621,12 @@ createApp({
         const clearChatHistory = async () => {
             if (!confirm('确定要清空聊天记录吗？')) return;
             try {
-                if (USE_LOCAL_STORAGE) {
-                    chatHistory.value = [];
-                    setLocalData('love_chat_history', []);
+                if (USE_API) {
+                    await axios.delete('/api/chat-history');
                     showToast('聊天记录已清空');
                 } else {
-                    await axios.delete('/api/chat-history');
                     chatHistory.value = [];
+                    setLocalData('love_chat_history', []);
                     showToast('聊天记录已清空');
                 }
             } catch (error) {
@@ -652,7 +660,22 @@ createApp({
         };
 
         const exportDatabase = async () => {
-            showToast('本地存储模式不支持导出数据库，请使用 JSON 导出', 'error');
+            if (USE_API) {
+                try {
+                    const response = await axios.get('/api/export-database', { responseType: 'blob' });
+                    const url = URL.createObjectURL(response.data);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `love-database-${new Date().toISOString().split('T')[0]}.sqlite`;
+                    a.click();
+                    URL.revokeObjectURL(url);
+                    showToast('数据库导出成功');
+                } catch (error) {
+                    showToast('导出失败', 'error');
+                }
+            } else {
+                showToast('本地存储模式不支持导出数据库，请使用 JSON 导出', 'error');
+            }
         };
 
         const importData = async (event) => {
@@ -666,27 +689,35 @@ createApp({
                     
                     if (data.methods && Array.isArray(data.methods)) {
                         methods.value = data.methods;
-                        setLocalData('love_methods', methods.value);
+                        if (!USE_API) setLocalData('love_methods', methods.value);
                     }
                     if (data.cases && Array.isArray(data.cases)) {
                         cases.value = data.cases;
-                        setLocalData('love_cases', cases.value);
+                        if (!USE_API) setLocalData('love_cases', cases.value);
                     }
                     if (data.notes && Array.isArray(data.notes)) {
                         notes.value = data.notes;
-                        setLocalData('love_notes', notes.value);
+                        if (!USE_API) setLocalData('love_notes', notes.value);
                     }
                     if (data.countdowns && Array.isArray(data.countdowns)) {
                         countdowns.value = data.countdowns;
-                        setLocalData('love_countdowns', countdowns.value);
+                        if (!USE_API) setLocalData('love_countdowns', countdowns.value);
                     }
                     if (data.aiConfig) {
                         aiConfig.value = data.aiConfig;
-                        setLocalData('love_ai_config', aiConfig.value);
+                        if (!USE_API) setLocalData('love_ai_config', aiConfig.value);
                     }
                     if (data.chatHistory && Array.isArray(data.chatHistory)) {
                         chatHistory.value = data.chatHistory;
-                        setLocalData('love_chat_history', chatHistory.value);
+                        if (!USE_API) setLocalData('love_chat_history', chatHistory.value);
+                    }
+                    
+                    if (USE_API) {
+                        try {
+                            await axios.post('/api/import-json', data);
+                        } catch (err) {
+                            console.error('服务器导入失败:', err);
+                        }
                     }
                     
                     loadStats();
@@ -700,7 +731,29 @@ createApp({
         };
 
         const importDatabase = async (event) => {
-            showToast('本地存储模式不支持导入数据库，请使用 JSON 导入', 'error');
+            if (USE_API) {
+                const file = event.target.files[0];
+                if (!file) return;
+                
+                const reader = new FileReader();
+                reader.onload = async (e) => {
+                    try {
+                        const base64 = btoa(
+                            new Uint8Array(e.target.result).reduce(
+                                (data, byte) => data + String.fromCharCode(byte), ''
+                            )
+                        );
+                        await axios.post('/api/import-database', { database: base64 });
+                        showToast('数据库导入成功，页面将刷新');
+                        setTimeout(() => window.location.reload(), 1500);
+                    } catch (error) {
+                        showToast('数据库导入失败', 'error');
+                    }
+                };
+                reader.readAsArrayBuffer(file);
+            } else {
+                showToast('本地存储模式不支持导入数据库，请使用 JSON 导入', 'error');
+            }
             event.target.value = '';
         };
 
@@ -709,22 +762,57 @@ createApp({
             if (!confirm('再次确认：这将删除所有方法、案例、注意事项和倒数日！')) return;
             
             try {
-                methods.value = [];
-                cases.value = [];
-                notes.value = [];
-                countdowns.value = [];
-                chatHistory.value = [];
-                
-                setLocalData('love_methods', []);
-                setLocalData('love_cases', []);
-                setLocalData('love_notes', []);
-                setLocalData('love_countdowns', []);
-                setLocalData('love_chat_history', []);
-                
+                if (USE_API) {
+                    await axios.delete('/api/methods');
+                    await axios.delete('/api/cases');
+                    await axios.delete('/api/notes');
+                    await axios.delete('/api/countdowns');
+                    await axios.delete('/api/chat-history');
+                    await loadMethods();
+                    await loadCases();
+                    await loadNotes();
+                    await loadCountdowns();
+                } else {
+                    methods.value = [];
+                    cases.value = [];
+                    notes.value = [];
+                    countdowns.value = [];
+                    chatHistory.value = [];
+                    setLocalData('love_methods', []);
+                    setLocalData('love_cases', []);
+                    setLocalData('love_notes', []);
+                    setLocalData('love_countdowns', []);
+                    setLocalData('love_chat_history', []);
+                }
                 loadStats();
                 showToast('所有数据已清空');
             } catch (error) {
                 showToast('清空失败', 'error');
+            }
+        };
+
+        const resetToDefault = async () => {
+            if (!confirm('确定要重置为默认数据吗？这将覆盖当前所有数据！')) return;
+            
+            try {
+                const defaultData = await loadDefaultData();
+                
+                methods.value = defaultData.methods || [];
+                cases.value = defaultData.cases || [];
+                notes.value = defaultData.notes || [];
+                countdowns.value = defaultData.countdowns || [];
+                
+                if (!USE_API) {
+                    setLocalData('love_methods', methods.value);
+                    setLocalData('love_cases', cases.value);
+                    setLocalData('love_notes', notes.value);
+                    setLocalData('love_countdowns', countdowns.value);
+                }
+                
+                loadStats();
+                showToast('已重置为默认数据');
+            } catch (error) {
+                showToast('重置失败', 'error');
             }
         };
 
@@ -800,7 +888,8 @@ createApp({
             exportDatabase,
             importData,
             importDatabase,
-            clearAllData
+            clearAllData,
+            resetToDefault
         };
     }
 }).mount('#app');

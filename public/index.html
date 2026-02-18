@@ -342,6 +342,10 @@
                             <h2>⚠️ 危险操作</h2>
                             <p class="settings-desc">以下操作不可恢复，请谨慎使用</p>
                             <div class="data-actions">
+                                <button class="warning-btn" @click="resetToDefault">
+                                    <span>🔄 重置为默认数据</span>
+                                    <small>恢复396个方法等默认内容</small>
+                                </button>
                                 <button class="danger-btn" @click="clearAllData">
                                     <span>🗑️ 清空所有数据</span>
                                     <small>删除所有记录</small>

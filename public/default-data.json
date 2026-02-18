@@ -1,0 +1,4128 @@
+{
+  "methods": [
+    {
+      "id": 1,
+      "title": "一起做饭",
+      "description": "一起下厨做一顿美食，增进感情",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 2,
+      "title": "看电影",
+      "description": "一起看一部浪漫电影，分享感受",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 3,
+      "title": "周末旅行",
+      "description": "计划一次周末小旅行，创造美好回忆",
+      "category": "出行",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 4,
+      "title": "写情书",
+      "description": "亲手写一封情书，表达爱意",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 5,
+      "title": "学习新技能",
+      "description": "一起学习一项新技能，共同成长",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 6,
+      "title": "在众人面前拥抱",
+      "description": "在众人面前大方地给对方一个温暖的拥抱",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 7,
+      "title": "互相依偎",
+      "description": "两人共处一室，整晚只是相互依偎、亲吻，不越界",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 8,
+      "title": "泡一杯茶",
+      "description": "餐后一起用同一个杯子泡一杯茶，慢慢品味",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 9,
+      "title": "写恋爱日记",
+      "description": "试着为对方写日记，哪怕只是简单的几个字",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 10,
+      "title": "互相倾诉",
+      "description": "在情绪起伏时，抱着对方放声大哭，诉说内心的喜怒哀乐",
+      "category": "日常",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 11,
+      "title": "短暂分开",
+      "description": "有时故意短暂分开一段时间，感受思念的滋味",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 12,
+      "title": "一起走神",
+      "description": "一起看一部其实都不太感兴趣的电影，然后一起走神",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 13,
+      "title": "说我爱你",
+      "description": "一定要亲口说出那句我爱你，不要吝啬表达",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 14,
+      "title": "山顶相拥",
+      "description": "在山顶上紧紧相拥，背靠背仰望星空",
+      "category": "出行",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 15,
+      "title": "专属铃声",
+      "description": "把对方的声音设成你的专属来电铃声",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 16,
+      "title": "炫耀幸福",
+      "description": "适时地炫耀幸福，做一对让人羡慕的情侣",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 17,
+      "title": "坦诚沟通",
+      "description": "敞开心扉，真实地表达自己的想法和感受",
+      "category": "日常",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 18,
+      "title": "尊重边界",
+      "description": "学会尊重对方的边界，不去触碰对方的敏感点",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 19,
+      "title": "寻找共同乐趣",
+      "description": "一起参与有趣的活动，分享快乐的时光",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 20,
+      "title": "适度肢体接触",
+      "description": "适度的肢体接触，比如拥抱、牵手、亲吻",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 21,
+      "title": "理解包容",
+      "description": "学会理解和包容，不去过于苛责对方",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 22,
+      "title": "给予回报",
+      "description": "适当地给予回报，让对方觉得自己很特别",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 23,
+      "title": "不要一成不变",
+      "description": "保持新鲜感，让对方觉得你有趣",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 24,
+      "title": "保持浪漫",
+      "description": "让爱情始终保持浪漫，增加感情浓度",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 25,
+      "title": "做美食",
+      "description": "女方想吃什么，就给女方做什么",
+      "category": "日常",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 26,
+      "title": "制造惊喜",
+      "description": "偶尔的惊喜能让女生感动",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 27,
+      "title": "了解对方",
+      "description": "了解女方的兴趣爱好，偶尔带她出去玩",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 28,
+      "title": "一起散步",
+      "description": "晚上一起手牵手散步，聊聊心事",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 29,
+      "title": "一起健身",
+      "description": "一起去健身房或者晨跑，互相监督",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 30,
+      "title": "一起逛超市",
+      "description": "一起去超市采购，规划下周的食谱",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 31,
+      "title": "一起做家务",
+      "description": "分工合作做家务，增加互动",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 32,
+      "title": "一起打游戏",
+      "description": "一起玩一款游戏，享受欢乐时光",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 33,
+      "title": "一起看日出",
+      "description": "早起一起看日出，感受大自然的美好",
+      "category": "出行",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 34,
+      "title": "一起看星星",
+      "description": "晚上一起在阳台看星星",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 35,
+      "title": "一起拍照片",
+      "description": "用相机记录下美好的瞬间",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 36,
+      "title": "一起养宠物",
+      "description": "一起养一只小猫或小狗，共同照顾",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 37,
+      "title": "一起种植",
+      "description": "一起种一盆花或蔬菜，看着它成长",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 38,
+      "title": "一起学乐器",
+      "description": "一起学习弹奏一种乐器",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 39,
+      "title": "一起画画",
+      "description": "一起画画，即使画得不好也没关系",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 40,
+      "title": "一起拼图",
+      "description": "一起完成一幅拼图",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 41,
+      "title": "一起做手工",
+      "description": "一起动手做一些手工制品",
+      "category": "娱乐",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 42,
+      "title": "一起看展览",
+      "description": "一起去看艺术展览或博物馆",
+      "category": "出行",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 43,
+      "title": "一起听音乐会",
+      "description": "一起去听一场音乐会",
+      "category": "出行",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 44,
+      "title": "一起露营",
+      "description": "一起去露营，体验大自然",
+      "category": "出行",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 45,
+      "title": "一起野餐",
+      "description": "在公园或郊外一起野餐",
+      "category": "出行",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 46,
+      "title": "一起骑行",
+      "description": "一起骑自行车去周边探索",
+      "category": "出行",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 47,
+      "title": "一起游泳",
+      "description": "夏天一起去游泳",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 48,
+      "title": "一起滑雪",
+      "description": "冬天一起去滑雪",
+      "category": "出行",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 49,
+      "title": "一起泡温泉",
+      "description": "一起去泡温泉放松",
+      "category": "出行",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 50,
+      "title": "一起做SPA",
+      "description": "一起去做SPA，享受放松时光",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 51,
+      "title": "一起去书店",
+      "description": "一起去书店，各自选一本喜欢的书",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 52,
+      "title": "一起读书",
+      "description": "一起读同一本书，然后讨论",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 53,
+      "title": "一起写愿望清单",
+      "description": "一起写下共同的愿望清单",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 54,
+      "title": "一起规划未来",
+      "description": "一起规划未来的生活",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 55,
+      "title": "一起做饭",
+      "description": "一起下厨做一顿美食，增进感情",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 56,
+      "title": "看电影",
+      "description": "一起看一部浪漫电影，分享感受",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 57,
+      "title": "周末旅行",
+      "description": "计划一次周末小旅行，创造美好回忆",
+      "category": "出行",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 58,
+      "title": "写情书",
+      "description": "亲手写一封情书，表达爱意",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 59,
+      "title": "学习新技能",
+      "description": "一起学习一项新技能，共同成长",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 60,
+      "title": "在众人面前拥抱",
+      "description": "在众人面前大方地给对方一个温暖的拥抱",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 61,
+      "title": "互相依偎",
+      "description": "两人共处一室，整晚只是相互依偎、亲吻，不越界",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 62,
+      "title": "泡一杯茶",
+      "description": "餐后一起用同一个杯子泡一杯茶，慢慢品味",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 63,
+      "title": "写恋爱日记",
+      "description": "试着为对方写日记，哪怕只是简单的几个字",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 64,
+      "title": "互相倾诉",
+      "description": "在情绪起伏时，抱着对方放声大哭，诉说内心的喜怒哀乐",
+      "category": "日常",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 65,
+      "title": "短暂分开",
+      "description": "有时故意短暂分开一段时间，感受思念的滋味",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 66,
+      "title": "一起走神",
+      "description": "一起看一部其实都不太感兴趣的电影，然后一起走神",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 67,
+      "title": "说我爱你",
+      "description": "一定要亲口说出那句我爱你，不要吝啬表达",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 68,
+      "title": "山顶相拥",
+      "description": "在山顶上紧紧相拥，背靠背仰望星空",
+      "category": "出行",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 69,
+      "title": "专属铃声",
+      "description": "把对方的声音设成你的专属来电铃声",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 70,
+      "title": "炫耀幸福",
+      "description": "适时地炫耀幸福，做一对让人羡慕的情侣",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 71,
+      "title": "坦诚沟通",
+      "description": "敞开心扉，真实地表达自己的想法和感受",
+      "category": "日常",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 72,
+      "title": "尊重边界",
+      "description": "学会尊重对方的边界，不去触碰对方的敏感点",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 73,
+      "title": "寻找共同乐趣",
+      "description": "一起参与有趣的活动，分享快乐的时光",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 74,
+      "title": "适度肢体接触",
+      "description": "适度的肢体接触，比如拥抱、牵手、亲吻",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 75,
+      "title": "理解包容",
+      "description": "学会理解和包容，不去过于苛责对方",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 76,
+      "title": "给予回报",
+      "description": "适当地给予回报，让对方觉得自己很特别",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 77,
+      "title": "不要一成不变",
+      "description": "保持新鲜感，让对方觉得你有趣",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 78,
+      "title": "保持浪漫",
+      "description": "让爱情始终保持浪漫，增加感情浓度",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 79,
+      "title": "做美食",
+      "description": "女方想吃什么，就给女方做什么",
+      "category": "日常",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 80,
+      "title": "制造惊喜",
+      "description": "偶尔的惊喜能让女生感动",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 81,
+      "title": "了解对方",
+      "description": "了解女方的兴趣爱好，偶尔带她出去玩",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 82,
+      "title": "一起散步",
+      "description": "晚上一起手牵手散步，聊聊心事",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 83,
+      "title": "一起健身",
+      "description": "一起去健身房或者晨跑，互相监督",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 84,
+      "title": "一起逛超市",
+      "description": "一起去超市采购，规划下周的食谱",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 85,
+      "title": "一起做家务",
+      "description": "分工合作做家务，增加互动",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 86,
+      "title": "一起打游戏",
+      "description": "一起玩一款游戏，享受欢乐时光",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 87,
+      "title": "一起看日出",
+      "description": "早起一起看日出，感受大自然的美好",
+      "category": "出行",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 88,
+      "title": "一起看星星",
+      "description": "晚上一起在阳台看星星",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 89,
+      "title": "一起拍照片",
+      "description": "用相机记录下美好的瞬间",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 90,
+      "title": "一起养宠物",
+      "description": "一起养一只小猫或小狗，共同照顾",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 91,
+      "title": "一起种植",
+      "description": "一起种一盆花或蔬菜，看着它成长",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 92,
+      "title": "一起学乐器",
+      "description": "一起学习弹奏一种乐器",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 93,
+      "title": "一起画画",
+      "description": "一起画画，即使画得不好也没关系",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 94,
+      "title": "一起拼图",
+      "description": "一起完成一幅拼图",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 95,
+      "title": "一起做手工",
+      "description": "一起动手做一些手工制品",
+      "category": "娱乐",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 96,
+      "title": "一起看展览",
+      "description": "一起去看艺术展览或博物馆",
+      "category": "出行",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 97,
+      "title": "一起听音乐会",
+      "description": "一起去听一场音乐会",
+      "category": "出行",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 98,
+      "title": "一起露营",
+      "description": "一起去露营，体验大自然",
+      "category": "出行",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 99,
+      "title": "一起野餐",
+      "description": "在公园或郊外一起野餐",
+      "category": "出行",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 100,
+      "title": "一起骑行",
+      "description": "一起骑自行车去周边探索",
+      "category": "出行",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 101,
+      "title": "一起游泳",
+      "description": "夏天一起去游泳",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 102,
+      "title": "一起滑雪",
+      "description": "冬天一起去滑雪",
+      "category": "出行",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 103,
+      "title": "一起泡温泉",
+      "description": "一起去泡温泉放松",
+      "category": "出行",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 104,
+      "title": "一起做SPA",
+      "description": "一起去做SPA，享受放松时光",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 105,
+      "title": "一起去书店",
+      "description": "一起去书店，各自选一本喜欢的书",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 106,
+      "title": "一起读书",
+      "description": "一起读同一本书，然后讨论",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 107,
+      "title": "一起写愿望清单",
+      "description": "一起写下共同的愿望清单",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 108,
+      "title": "一起规划未来",
+      "description": "一起规划未来的生活",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 109,
+      "title": "每天视频通话",
+      "description": "每天约定固定时间视频通话，即使只是简短的几分钟，让对方感觉就在身边",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 110,
+      "title": "一起看电影",
+      "description": "使用同步播放软件一起看同一部电影，边看边讨论",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 111,
+      "title": "分享日常",
+      "description": "随手拍一些日常照片和小视频，分享生活中的点滴",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 112,
+      "title": "同步时间",
+      "description": "在同一时间做同样的事情，比如一起喝咖啡、一起吃饭",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 113,
+      "title": "寄送小惊喜",
+      "description": "不定期寄送小礼物或手写情书，给对方惊喜",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 114,
+      "title": "制定计划见面",
+      "description": "一起制定下次见面的计划，让彼此有期待",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 115,
+      "title": "共同目标",
+      "description": "设定共同的目标，比如一起学习一门语言或技能",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 116,
+      "title": "睡前聊天",
+      "description": "睡前通电话或语音，说晚安，分享一天的心情",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 117,
+      "title": "互相信任",
+      "description": "建立信任是异地恋最重要的基础，不要猜疑",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 118,
+      "title": "保持独立",
+      "description": "各自有自己的生活和朋友圈，不要把全部精力放在对方身上",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 119,
+      "title": "表达思念",
+      "description": "直接告诉对方你想她了，不要害羞",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 120,
+      "title": "制定规则",
+      "description": "一起制定一些相处规则，比如多久见一次面、吵架了怎么解决",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 121,
+      "title": "一起打游戏",
+      "description": "一起玩在线游戏，增加互动和乐趣",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 122,
+      "title": "送早餐",
+      "description": "远程为对方点一份早餐或外卖",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 123,
+      "title": "记住细节",
+      "description": "记住对方说过的小事，让对方知道你在乎",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 124,
+      "title": "一起读书",
+      "description": "一起读同一本书，然后分享感受",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 125,
+      "title": "规划未来",
+      "description": "一起畅想和规划你们的未来，让彼此有奔头",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 126,
+      "title": "分享音乐",
+      "description": "创建一个共享歌单，分享喜欢的音乐",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 127,
+      "title": "突然出现",
+      "description": "如果条件允许，突然出现在对方面前给惊喜",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 128,
+      "title": "写日记",
+      "description": "记录你们的故事，见面时交换",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 129,
+      "title": "保持积极",
+      "description": "保持积极乐观的态度，不要传递负面情绪",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 130,
+      "title": "互相鼓励",
+      "description": "在对方遇到困难时鼓励支持",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 131,
+      "title": "视频约会",
+      "description": "精心准备一次视频约会，打扮一下，营造氛围",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 132,
+      "title": "分享美食",
+      "description": "视频时一起吃饭，分享自己做的菜",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 133,
+      "title": "约定暗号",
+      "description": "创造属于你们的专属暗号",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 134,
+      "title": "一起健身",
+      "description": "视频一起运动健身",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 135,
+      "title": "送晚安",
+      "description": "录一段语音或视频说晚安",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 136,
+      "title": "一起旅行",
+      "description": "虽然异地也可以云旅行，看同一个地方的直播",
+      "category": "出行",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 137,
+      "title": "分享穿搭",
+      "description": "分享今天的穿搭，给对方建议",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 138,
+      "title": "一起学习",
+      "description": "视频一起学习或工作",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 139,
+      "title": "送花",
+      "description": "在特殊日子送花到对方办公室或家",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 140,
+      "title": "分享天气",
+      "description": "分享当地的天气和风景",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 141,
+      "title": "制定纪念日",
+      "description": "创造属于你们的特殊纪念日",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 142,
+      "title": "一起追剧",
+      "description": "一起追同一部剧，同步更新",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 143,
+      "title": "分享梦境",
+      "description": "分享自己做的梦",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 144,
+      "title": "送祝福",
+      "description": "在对方重要的日子送祝福和鼓励",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 145,
+      "title": "一起做饭",
+      "description": "视频一起学做同一道菜",
+      "category": "日常",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 146,
+      "title": "分享朋友",
+      "description": "让对方认识自己的朋友",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 147,
+      "title": "规划见面",
+      "description": "每次见面都留下美好的回忆",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 148,
+      "title": "保持联系",
+      "description": "即使很忙也要保持联系，不要让对方感到被忽视",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:15:47"
+    },
+    {
+      "id": 149,
+      "title": "一起上网课",
+      "description": "视频连线一起上网课，互相监督，下课还能讨论问题",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 150,
+      "title": "共享学习计划",
+      "description": "制定共同的学习计划表，互相督促完成作业和复习",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 151,
+      "title": "图书馆打卡",
+      "description": "每天在图书馆学习时拍张照片发给对方，一起努力",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 152,
+      "title": "同步考试周",
+      "description": "考试周一起熬夜复习，互相打气加油",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 153,
+      "title": "分享课堂趣事",
+      "description": "课堂上发生的有趣事情及时分享给对方",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 154,
+      "title": "一起写作业",
+      "description": "视频一起写作业，遇到问题可以讨论",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 155,
+      "title": "周末云约会",
+      "description": "周末一起看电影、听音乐、打游戏",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 156,
+      "title": "寄明信片",
+      "description": "用学校的明信片写封信寄给对方",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 157,
+      "title": "共享美食",
+      "description": "各自在学校食堂点相似的菜，视频一起吃",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 158,
+      "title": "一起晨跑",
+      "description": "约定时间一起早起晨跑，视频打卡",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 159,
+      "title": "参加线上活动",
+      "description": "一起参加线上讲座、比赛等活动",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 160,
+      "title": "分享校园风景",
+      "description": "拍一拍学校的风景发给对方",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 161,
+      "title": "组队学习",
+      "description": "和对方组队参加学科竞赛",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 162,
+      "title": "互相批改作业",
+      "description": "写完作业互相检查，共同进步",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 163,
+      "title": "分享书单",
+      "description": "互相推荐好书，一起阅读",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 164,
+      "title": "约定见面时间",
+      "description": "约定国庆、寒假等假期见面",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 165,
+      "title": "一起参加社团",
+      "description": "虽然异地但可以参加同类型的社团活动",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 166,
+      "title": "分享课程表",
+      "description": "了解对方的课程安排，方便找时间聊天",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 167,
+      "title": "云自习室",
+      "description": "开着视频一起上自习，就像在身边一样",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 168,
+      "title": "互相送特产",
+      "description": "放假回来给对方带学校当地的特产",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 169,
+      "title": "一起备考",
+      "description": "一起准备四六级、考研等重要考试",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 170,
+      "title": "分享笔记",
+      "description": "整理好的笔记分享给对方",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 171,
+      "title": "生日惊喜",
+      "description": "在对方生日时订蛋糕送到学校",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 172,
+      "title": "一起参加线上班会",
+      "description": "如果可以的话，陪对方参加线上班会",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 173,
+      "title": "云逛校园",
+      "description": "视频带着对方逛自己的校园",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 174,
+      "title": "分享食堂美食",
+      "description": "今天食堂吃了什么拍给对方看",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 175,
+      "title": "一起选课",
+      "description": "选课季帮对方一起参谋",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 176,
+      "title": "互相鼓励",
+      "description": "对方遇到挫折时及时鼓励支持",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 177,
+      "title": "分享获奖消息",
+      "description": "有什么好消息第一时间告诉对方",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 178,
+      "title": "一起听讲座",
+      "description": "线上讲座一起听，听完讨论",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 179,
+      "title": "主动分享日常",
+      "description": "主动告诉对方今天发生了什么，哪怕是小事",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 180,
+      "title": "认真倾听",
+      "description": "对方说话时认真听，不要打断",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 181,
+      "title": "及时回应",
+      "description": "看到消息及时回复，不要让对方等太久",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 182,
+      "title": "使用表情包",
+      "description": "适当使用表情包增加聊天趣味性",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 183,
+      "title": "分享照片视频",
+      "description": "拍一些照片和小视频分享生活",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 184,
+      "title": "询问对方感受",
+      "description": "多问问对方今天过得怎么样",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 185,
+      "title": "记住细节",
+      "description": "记住对方说过的小事，让对方知道你在乎",
+      "category": "日常",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 186,
+      "title": "语音消息",
+      "description": "偶尔发语音消息，比文字更温暖",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 187,
+      "title": "视频通话",
+      "description": "经常视频通话，看到对方的表情",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 188,
+      "title": "早晚安问候",
+      "description": "每天说早安和晚安",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 189,
+      "title": "分享歌曲",
+      "description": "听到好听的歌分享给对方",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 190,
+      "title": "讨论共同话题",
+      "description": "找你们都感兴趣的话题讨论",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 191,
+      "title": "适当撒娇",
+      "description": "适当撒娇增加情趣",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 192,
+      "title": "表达关心",
+      "description": "天凉了提醒加衣，生病了提醒吃药",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 193,
+      "title": "分享梦想",
+      "description": "和对方分享你的梦想和规划",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 194,
+      "title": "倾听烦恼",
+      "description": "对方有烦恼时认真倾听，给出建议",
+      "category": "日常",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 195,
+      "title": "适时赞美",
+      "description": "不要吝啬赞美，让对方开心",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 196,
+      "title": "制造期待",
+      "description": "说一些让对方期待的话，比如\"等见面了我们...\"",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 197,
+      "title": "不敷衍",
+      "description": "认真回复，不要只发\"嗯\"\"哦\"",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 198,
+      "title": "分享趣事",
+      "description": "把看到的趣事分享给对方",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 199,
+      "title": "适当吃醋",
+      "description": "适当吃醋让对方知道你在乎，但不要过度",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 200,
+      "title": "说心里话",
+      "description": "偶尔说说心里话，让对方更了解你",
+      "category": "日常",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 201,
+      "title": "分享美食",
+      "description": "吃到好吃的拍给对方看",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 202,
+      "title": "一起追剧",
+      "description": "一起追同一部剧，讨论剧情",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 203,
+      "title": "分享知识",
+      "description": "学到的新知识分享给对方",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 204,
+      "title": "不查岗",
+      "description": "不要像查岗一样追问对方行踪",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 205,
+      "title": "尊重隐私",
+      "description": "尊重对方的隐私，不强行看手机",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 206,
+      "title": "不冷暴力",
+      "description": "吵架了不要冷战，主动沟通",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 207,
+      "title": "不翻旧账",
+      "description": "吵架时不要翻旧账",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 208,
+      "title": "不说狠话",
+      "description": "生气时也不要说伤害对方的话",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 209,
+      "title": "她生气时先认错",
+      "description": "不管谁对谁错，先认错让她消气",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 210,
+      "title": "不要讲道理",
+      "description": "她生气时不要讲道理，先哄好再说",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 211,
+      "title": "说\"我错了\"",
+      "description": "直接说\"我错了\"，不要辩解",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 212,
+      "title": "送小礼物",
+      "description": "准备一个小礼物哄她开心",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 213,
+      "title": "说甜言蜜语",
+      "description": "多说一些甜言蜜语",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 214,
+      "title": "抱抱她",
+      "description": "如果在身边，直接抱抱她",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 215,
+      "title": "亲亲她",
+      "description": "在她额头或脸颊亲一下",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 216,
+      "title": "买她爱吃的",
+      "description": "买她喜欢吃的东西给她",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 217,
+      "title": "带她去吃好吃的",
+      "description": "带她去吃一顿好吃的大餐",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 218,
+      "title": "陪她逛街",
+      "description": "陪她逛街买东西",
+      "category": "日常",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 219,
+      "title": "帮她按摩",
+      "description": "帮她按摩肩膀或头部",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 220,
+      "title": "帮她做家务",
+      "description": "主动帮她做家务",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 221,
+      "title": "写情书",
+      "description": "写一封情书给她",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 222,
+      "title": "唱首歌",
+      "description": "唱首她喜欢的歌",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 223,
+      "title": "跳支舞",
+      "description": "跳支搞笑的舞逗她笑",
+      "category": "娱乐",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 224,
+      "title": "讲笑话",
+      "description": "讲几个笑话逗她开心",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 225,
+      "title": "看喜剧电影",
+      "description": "一起看一部喜剧电影",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 226,
+      "title": "给她惊喜",
+      "description": "准备一个小惊喜",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 227,
+      "title": "说\"我爱你\"",
+      "description": "认真地说\"我爱你\"",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 228,
+      "title": "陪她聊天",
+      "description": "陪她聊她感兴趣的话题",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 229,
+      "title": "听她倾诉",
+      "description": "认真听她倾诉，不要打断",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 230,
+      "title": "给她安全感",
+      "description": "让她知道你会一直在",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 231,
+      "title": "帮她解决问题",
+      "description": "帮她解决遇到的问题",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 232,
+      "title": "送花",
+      "description": "送一束她喜欢的花",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 233,
+      "title": "订外卖",
+      "description": "帮她订一份外卖",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 234,
+      "title": "发红包",
+      "description": "发个红包哄她开心",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 235,
+      "title": "写保证书",
+      "description": "写一份保证书，保证下次不会再犯",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 236,
+      "title": "陪她散步",
+      "description": "陪她出去散散心",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 237,
+      "title": "给她梳头",
+      "description": "帮她梳梳头",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 238,
+      "title": "一起做饭",
+      "description": "一起做一顿饭",
+      "category": "日常",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 239,
+      "title": "不要\"哦\"\"嗯\"敷衍",
+      "description": "不要只回复\"哦\"\"嗯\"，会让对方觉得你不在乎",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 240,
+      "title": "不要已读不回",
+      "description": "看到消息及时回复，不要让对方等",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 241,
+      "title": "不要冷战",
+      "description": "吵架了不要冷战，主动沟通",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 242,
+      "title": "不要翻旧账",
+      "description": "吵架时不要翻旧账",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 243,
+      "title": "不要说分手",
+      "description": "分手两个字不要轻易说出口",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 244,
+      "title": "不要和异性暧昧",
+      "description": "和其他异性保持适当距离",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 245,
+      "title": "不要拿她和别人比较",
+      "description": "不要说\"你看别人多好\"",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 246,
+      "title": "不要贬低她",
+      "description": "多夸奖，少批评",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 247,
+      "title": "不要说谎",
+      "description": "即使是善意的谎言也尽量不要说",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 248,
+      "title": "不要忽略她的感受",
+      "description": "多关注她的情绪变化",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 249,
+      "title": "不要太自私",
+      "description": "多为她着想",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 250,
+      "title": "不要太大男子主义",
+      "description": "平等对待，互相尊重",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 251,
+      "title": "不要沉迷游戏",
+      "description": "不要因为游戏忽略她",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 252,
+      "title": "不要总是玩手机",
+      "description": "在一起时多陪陪她",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 253,
+      "title": "不要敷衍了事",
+      "description": "答应的事情要做到",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 254,
+      "title": "不要说\"多喝热水\"",
+      "description": "不要只说\"多喝热水\"，要拿出实际行动",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 255,
+      "title": "不要讲道理",
+      "description": "她生气时不要讲道理，先哄好再说",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 256,
+      "title": "不要说\"别闹了\"",
+      "description": "她红着眼眶时说这句话等于原地自爆",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 257,
+      "title": "不要查岗",
+      "description": "不要像查岗一样追问对方行踪",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 258,
+      "title": "不要看她手机",
+      "description": "尊重对方的隐私，不强行看手机",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 259,
+      "title": "不要冷暴力",
+      "description": "吵架了不要冷战，主动沟通",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 260,
+      "title": "不要翻旧账",
+      "description": "吵架时不要翻旧账",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 261,
+      "title": "不要说狠话",
+      "description": "生气时也不要说伤害对方的话",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 262,
+      "title": "不要和异性单独相处",
+      "description": "尽量避免和其他异性单独相处",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 263,
+      "title": "不要提前任",
+      "description": "不要在对方面前提前任",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 264,
+      "title": "不要忘记重要日期",
+      "description": "生日、纪念日等重要日期一定要记住",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 265,
+      "title": "不要敷衍评价",
+      "description": "她问你怎么样时，不要只说\"好看\"，要添油加醋",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 266,
+      "title": "不要小气",
+      "description": "不要想着自己会吃亏",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 267,
+      "title": "不要无原则顺从",
+      "description": "不要一味无原则顺从，要有自己的原则",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 268,
+      "title": "不要说要死要活的话",
+      "description": "不要说\"没有你我活不了\"之类的话",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 269,
+      "title": "异地恋：她生病时",
+      "description": "不在身边时，立刻给她订药、订粥、订水果，然后一直陪着她视频，直到她睡着",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 270,
+      "title": "异地恋：她心情不好时",
+      "description": "不要说\"别难过\"，要说\"我知道你现在很难受，我陪着你，想说话就说，不想说就靠在我身上（视频里）\"",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 271,
+      "title": "异地恋：她生气时",
+      "description": "不要讲道理，直接说\"我错了，你想怎么罚我都行，不要生气了好不好\"，然后立刻给她订个小礼物",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 272,
+      "title": "异地恋：她想你时",
+      "description": "不要说\"我也想你\"，要说\"我看看什么时候有空买票去找你\"，然后真的去查车票",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 273,
+      "title": "异地恋：她累了时",
+      "description": "不要说\"休息一下\"，要说\"我给你讲个笑话/唱首歌/陪你聊聊天，你好好放松\"",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 274,
+      "title": "异地恋：她受委屈时",
+      "description": "不要说\"别跟她一般见识\"，要说\"谁欺负你了？告诉我，我帮你出气\"，然后认真听她倾诉",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 275,
+      "title": "异地恋：她考试失利时",
+      "description": "不要说\"下次加油\"，要说\"一次考试而已，你在我心里永远是最棒的，走，我带你云吃好吃的\"",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 276,
+      "title": "异地恋：她失眠时",
+      "description": "不要说\"早点睡\"，要说\"我陪你聊聊天/给你讲故事/唱摇篮曲，等你睡着了我再挂\"",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 277,
+      "title": "异地恋：她饿了时",
+      "description": "不要说\"去吃东西\"，要说\"你想吃什么？我给你订外卖\"，然后立刻给她订",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 278,
+      "title": "异地恋：她害怕时",
+      "description": "不要说\"别怕\"，要说\"有我在，我会一直陪着你，我们开着视频睡\"",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 279,
+      "title": "异地恋：突然出现",
+      "description": "如果条件允许，偷偷买了票出现在她面前，这是最好的惊喜",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 280,
+      "title": "异地恋：订花到学校",
+      "description": "在她生日或纪念日，订一束花送到她的宿舍或教室",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 281,
+      "title": "异地恋：寄手写情书",
+      "description": "手写一封情书，比打字更有温度",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 282,
+      "title": "异地恋：录视频说晚安",
+      "description": "录一段视频说晚安，她睡前可以看",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 283,
+      "title": "异地恋：一起云吃饭",
+      "description": "视频一起吃饭，就像真的在一起",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 284,
+      "title": "异地恋：一起看电影",
+      "description": "用同步播放软件一起看电影",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 285,
+      "title": "异地恋：一起打游戏",
+      "description": "一起玩游戏，增加互动",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 286,
+      "title": "异地恋：一起学习",
+      "description": "视频一起学习，互相监督",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 287,
+      "title": "异地恋：送她喜欢的零食",
+      "description": "记住她喜欢吃的零食，定期给她寄一箱",
+      "category": "日常",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 288,
+      "title": "异地恋：记住她的生理期",
+      "description": "记住她的生理期，提前给她准备红糖姜茶和暖宝宝",
+      "category": "日常",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 289,
+      "title": "异地恋：分享每一天",
+      "description": "主动分享自己的生活，让她感觉参与了你的生活",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 290,
+      "title": "异地恋：认真听她说话",
+      "description": "她说话时认真听，不要打断，不要敷衍",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 291,
+      "title": "异地恋：及时回复消息",
+      "description": "看到消息及时回复，不要让她等太久",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 292,
+      "title": "异地恋：早晚安问候",
+      "description": "每天说早安和晚安，不要忘记",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 293,
+      "title": "异地恋：偶尔发语音",
+      "description": "偶尔发语音消息，比文字更温暖",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 294,
+      "title": "异地恋：经常视频通话",
+      "description": "经常视频通话，看到对方的表情",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 295,
+      "title": "异地恋：给她安全感",
+      "description": "让她知道你会一直在，主动和异性保持距离",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 296,
+      "title": "异地恋：不要冷战",
+      "description": "吵架了不要冷战，主动沟通",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 297,
+      "title": "异地恋：不要翻旧账",
+      "description": "吵架时不要翻旧账",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 298,
+      "title": "异地恋：不要说分手",
+      "description": "分手两个字不要轻易说出口",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 299,
+      "title": "异地恋：规划见面",
+      "description": "一起规划下次见面，让彼此有期待",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 300,
+      "title": "异地恋：送她专属礼物",
+      "description": "定制一个专属礼物，比如刻名字的项链",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 301,
+      "title": "异地恋：一起听音乐",
+      "description": "创建共享歌单，一起听音乐",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 302,
+      "title": "异地恋：一起追剧",
+      "description": "一起追同一部剧，同步更新",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 303,
+      "title": "异地恋：分享梦想",
+      "description": "和对方分享你的梦想，一起规划未来",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 304,
+      "title": "异地恋：互相鼓励",
+      "description": "对方遇到困难时及时鼓励支持",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 305,
+      "title": "异地恋：记住细节",
+      "description": "记住对方说过的小事，让对方知道你在乎",
+      "category": "日常",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 306,
+      "title": "异地恋：适当撒娇",
+      "description": "适当撒娇增加情趣",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 307,
+      "title": "异地恋：表达关心",
+      "description": "天凉了提醒加衣，生病了提醒吃药",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 308,
+      "title": "异地恋：制造期待",
+      "description": "说一些让对方期待的话，比如\"等见面了我们...\"",
+      "category": "浪漫",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 309,
+      "title": "异地恋：不敷衍",
+      "description": "认真回复，不要只发\"嗯\"\"哦\"",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 310,
+      "title": "异地恋：分享趣事",
+      "description": "把看到的趣事分享给对方",
+      "category": "娱乐",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 311,
+      "title": "异地恋：适当吃醋",
+      "description": "适当吃醋让对方知道你在乎，但不要过度",
+      "category": "浪漫",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 312,
+      "title": "异地恋：说心里话",
+      "description": "偶尔说说心里话，让对方更了解你",
+      "category": "日常",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 313,
+      "title": "异地恋：分享美食",
+      "description": "吃到好吃的拍给对方看",
+      "category": "日常",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 314,
+      "title": "异地恋：分享知识",
+      "description": "学到的新知识分享给对方",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 315,
+      "title": "异地恋：不查岗",
+      "description": "不要像查岗一样追问对方行踪",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 316,
+      "title": "异地恋：尊重隐私",
+      "description": "尊重对方的隐私，不强行看手机",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 317,
+      "title": "异地恋：不说狠话",
+      "description": "生气时也不要说伤害对方的话",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 318,
+      "title": "异地恋：不要\"哦\"\"嗯\"敷衍",
+      "description": "不要只回复\"哦\"\"嗯\"，会让对方觉得你不在乎",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 319,
+      "title": "异地恋：不要已读不回",
+      "description": "看到消息及时回复，不要让对方等太久",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 320,
+      "title": "异地恋：不要冷战",
+      "description": "吵架了不要冷战，主动沟通",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 321,
+      "title": "异地恋：不要翻旧账",
+      "description": "吵架时不要翻旧账",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 322,
+      "title": "异地恋：不要说分手",
+      "description": "分手两个字不要轻易说出口",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 323,
+      "title": "异地恋：不要和异性暧昧",
+      "description": "和其他异性保持适当距离",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 324,
+      "title": "异地恋：不要拿对方和别人比较",
+      "description": "不要说\"你看别人多好\"",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 325,
+      "title": "异地恋：不要贬低对方",
+      "description": "多夸奖，少批评",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 326,
+      "title": "异地恋：不要说谎",
+      "description": "即使是善意的谎言也尽量不要说",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 327,
+      "title": "异地恋：不要忽略对方的感受",
+      "description": "多关注对方的情绪变化",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 328,
+      "title": "异地恋：不要太自私",
+      "description": "多为对方着想",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 329,
+      "title": "异地恋：不要沉迷游戏",
+      "description": "不要因为游戏忽略对方",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 330,
+      "title": "异地恋：不要总是玩手机",
+      "description": "视频时多看看对方，不要一直玩手机",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 331,
+      "title": "异地恋：不要敷衍了事",
+      "description": "答应的事情要做到",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 332,
+      "title": "异地恋：不要只说\"多喝热水\"",
+      "description": "不要只说\"多喝热水\"，要拿出实际行动",
+      "category": "成长",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 333,
+      "title": "异地恋：不要讲道理",
+      "description": "对方生气时不要讲道理，先哄好再说",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 334,
+      "title": "异地恋：不要说\"别闹了\"",
+      "description": "对方红着眼眶时说这句话等于原地自爆",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 335,
+      "title": "异地恋：不要查岗",
+      "description": "不要像查岗一样追问对方行踪",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 336,
+      "title": "异地恋：不要强行看手机",
+      "description": "尊重对方的隐私，不强行看手机",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 337,
+      "title": "异地恋：不要说狠话",
+      "description": "生气时也不要说伤害对方的话",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 338,
+      "title": "异地恋：不要和异性单独相处",
+      "description": "尽量避免和其他异性单独相处",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 339,
+      "title": "异地恋：不要提前任",
+      "description": "不要在对方面前提前任",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 340,
+      "title": "异地恋：不要忘记重要日期",
+      "description": "生日、纪念日等重要日期一定要记住",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 341,
+      "title": "异地恋：不要小气",
+      "description": "不要想着自己会吃亏",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 342,
+      "title": "异地恋：不要无原则顺从",
+      "description": "不要一味无原则顺从，要有自己的原则",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 343,
+      "title": "异地恋：不要说要死要活的话",
+      "description": "不要说\"没有你我活不了\"之类的话",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 344,
+      "title": "异地恋：不要只有睡前才聊天",
+      "description": "不要只有睡前才想起对方，白天也可以分享",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 345,
+      "title": "异地恋：不要总是让对方主动",
+      "description": "感情是相互的，你也要主动",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 346,
+      "title": "异地恋：不要隐瞒自己的行踪",
+      "description": "主动告诉对方你在做什么，让对方安心",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 347,
+      "title": "异地恋：不要只分享开心的事",
+      "description": "不开心的事也可以分享，一起承担",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 348,
+      "title": "异地恋：不要总是要求对方改变",
+      "description": "接受对方的缺点，不要总是要求对方改变",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 349,
+      "title": "异地恋：不要忽略仪式感",
+      "description": "节日和纪念日要有仪式感",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 350,
+      "title": "异地恋：不要只想着见面",
+      "description": "过好各自的生活，一起成长",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 351,
+      "title": "异地恋：不要把对方当出气筒",
+      "description": "不要把自己的负面情绪发泄到对方身上",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 352,
+      "title": "异地恋：不要总是说\"我很忙\"",
+      "description": "即使忙也要抽时间陪对方，哪怕只是几分钟",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 353,
+      "title": "异地恋：不要敷衍对方的分享",
+      "description": "对方分享时认真回应，不要敷衍",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 354,
+      "title": "异地恋：不要和别人吐槽对方",
+      "description": "有问题直接和对方沟通，不要和别人吐槽",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 355,
+      "title": "异地恋：不要试探对方",
+      "description": "不要用各种方式试探对方是否爱你",
+      "category": "成长",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 356,
+      "title": "异地恋：不要轻易放弃",
+      "description": "异地恋很难，但不要轻易放弃",
+      "category": "成长",
+      "difficulty": "高",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 357,
+      "title": "异地恋：每天视频通话",
+      "description": "每天约定固定时间视频通话，即使只是简短的几分钟",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 358,
+      "title": "异地恋：一起看电影",
+      "description": "使用同步播放软件一起看同一部电影，边看边讨论",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 359,
+      "title": "异地恋：分享日常",
+      "description": "随手拍一些日常照片和小视频，分享生活中的点滴",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 360,
+      "title": "异地恋：同步时间",
+      "description": "在同一时间做同样的事情，比如一起喝咖啡、一起吃饭",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 361,
+      "title": "异地恋：寄送小惊喜",
+      "description": "不定期寄送小礼物或手写情书，给对方惊喜",
+      "category": "异地恋",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 362,
+      "title": "异地恋：制定计划见面",
+      "description": "一起制定下次见面的计划，让彼此有期待",
+      "category": "异地恋",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 363,
+      "title": "异地恋：共同目标",
+      "description": "设定共同的目标，比如一起学习一门语言或技能",
+      "category": "异地恋",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 364,
+      "title": "异地恋：睡前聊天",
+      "description": "睡前通电话或语音，说晚安，分享一天的心情",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 365,
+      "title": "异地恋：互相信任",
+      "description": "建立信任是异地恋最重要的基础，不要猜疑",
+      "category": "异地恋",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 366,
+      "title": "异地恋：保持独立",
+      "description": "各自有自己的生活和朋友圈，不要把全部精力放在对方身上",
+      "category": "异地恋",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 367,
+      "title": "异地恋：表达思念",
+      "description": "直接告诉对方你想她了，不要害羞",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 368,
+      "title": "异地恋：制定规则",
+      "description": "一起制定一些相处规则，比如多久见一次面、吵架了怎么解决",
+      "category": "异地恋",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 369,
+      "title": "异地恋：一起打游戏",
+      "description": "一起玩在线游戏，增加互动和乐趣",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 370,
+      "title": "异地恋：送早餐",
+      "description": "远程为对方点一份早餐或外卖",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 371,
+      "title": "异地恋：记住细节",
+      "description": "记住对方说过的小事，让对方知道你在乎",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 372,
+      "title": "异地恋：一起读书",
+      "description": "一起读同一本书，然后分享感受",
+      "category": "异地恋",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 373,
+      "title": "异地恋：规划未来",
+      "description": "一起畅想和规划你们的未来，让彼此有奔头",
+      "category": "异地恋",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 374,
+      "title": "异地恋：分享音乐",
+      "description": "创建一个共享歌单，分享喜欢的音乐",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 375,
+      "title": "异地恋：突然出现",
+      "description": "如果条件允许，突然出现在对方面前给惊喜",
+      "category": "异地恋",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 376,
+      "title": "异地恋：写日记",
+      "description": "记录你们的故事，见面时交换",
+      "category": "异地恋",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 377,
+      "title": "异地恋：保持积极",
+      "description": "保持积极乐观的态度，不要传递负面情绪",
+      "category": "异地恋",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 378,
+      "title": "异地恋：互相鼓励",
+      "description": "在对方遇到困难时鼓励支持",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 379,
+      "title": "异地恋：视频约会",
+      "description": "精心准备一次视频约会，打扮一下，营造氛围",
+      "category": "异地恋",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 380,
+      "title": "异地恋：分享美食",
+      "description": "视频时一起吃饭，分享自己做的菜",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 381,
+      "title": "异地恋：约定暗号",
+      "description": "创造属于你们的专属暗号",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 382,
+      "title": "异地恋：一起健身",
+      "description": "视频一起运动健身",
+      "category": "异地恋",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 383,
+      "title": "异地恋：送晚安",
+      "description": "录一段语音或视频说晚安",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 384,
+      "title": "异地恋：一起旅行",
+      "description": "虽然异地也可以云旅行，看同一个地方的直播",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 385,
+      "title": "异地恋：分享穿搭",
+      "description": "分享今天的穿搭，给对方建议",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 386,
+      "title": "异地恋：一起学习",
+      "description": "视频一起学习或工作",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 387,
+      "title": "异地恋：送花",
+      "description": "在特殊日子送花到对方办公室或家",
+      "category": "异地恋",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 388,
+      "title": "异地恋：分享天气",
+      "description": "分享当地的天气和风景",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 389,
+      "title": "异地恋：制定纪念日",
+      "description": "创造属于你们的特殊纪念日",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 390,
+      "title": "异地恋：一起追剧",
+      "description": "一起追同一部剧，同步更新",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 391,
+      "title": "异地恋：分享梦境",
+      "description": "分享自己做的梦",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 392,
+      "title": "异地恋：送祝福",
+      "description": "在对方重要的日子送祝福和鼓励",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 393,
+      "title": "异地恋：一起做饭",
+      "description": "视频一起学做同一道菜",
+      "category": "异地恋",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 394,
+      "title": "异地恋：分享朋友",
+      "description": "让对方认识自己的朋友",
+      "category": "异地恋",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 395,
+      "title": "异地恋：规划见面",
+      "description": "每次见面都留下美好的回忆",
+      "category": "异地恋",
+      "difficulty": "中等",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 396,
+      "title": "异地恋：保持联系",
+      "description": "即使很忙也要保持联系，不要让对方感到被忽视",
+      "category": "异地恋",
+      "difficulty": "简单",
+      "created_at": "2026-02-18 03:25:22"
+    }
+  ],
+  "cases": [
+    {
+      "id": 1,
+      "title": "第一次约会",
+      "content": "选择一个安静舒适的咖啡厅，聊聊彼此的兴趣爱好...",
+      "date": "2024-01-15",
+      "mood": "开心",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 2,
+      "title": "生日惊喜",
+      "content": "准备了一个小惊喜派对，邀请了她最好的朋友...",
+      "date": "2024-02-20",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 3,
+      "title": "一起做饭",
+      "content": "周末一起做了一顿大餐，虽然手忙脚乱但很开心...",
+      "date": "2024-03-01",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 4,
+      "title": "看电影",
+      "content": "一起看了一部浪漫电影，她感动得哭了...",
+      "date": "2024-03-10",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 5,
+      "title": "公园散步",
+      "content": "晚上在公园手牵手散步，聊了很多心里话...",
+      "date": "2024-03-15",
+      "mood": "开心",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 6,
+      "title": "一起旅行",
+      "content": "第一次一起旅行，去了海边，留下了很多美好回忆...",
+      "date": "2024-04-01",
+      "mood": "开心",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 7,
+      "title": "纪念日",
+      "content": "恋爱一周年，准备了惊喜礼物，她很喜欢...",
+      "date": "2024-04-15",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 8,
+      "title": "一起打游戏",
+      "content": "一起玩游戏，虽然她总是输，但玩得很开心...",
+      "date": "2024-04-20",
+      "mood": "有趣",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 9,
+      "title": "一起看日出",
+      "content": "早起一起去山顶看日出，景色很美...",
+      "date": "2024-05-01",
+      "mood": "浪漫",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 10,
+      "title": "一起养宠物",
+      "content": "领养了一只小猫，取名叫小宝贝...",
+      "date": "2024-05-10",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 11,
+      "title": "深圳程序员的故事",
+      "content": "深圳一位程序员因穿着优衣库而被女友嘲讽，最终导致两人分手。这种以\"爱\"的名义进行的精神控制，其实是情感虐待的表现。尊严是爱情的基石，任何时候都不应被侵蚀。",
+      "date": "2024-01-20",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 12,
+      "title": "北京情侣的冷战",
+      "content": "北京一对情侣因\"已读不回\"而冷战72小时，最终选择分手。沟通的缺失让误会在心中滋长。良好的沟通可以化解无数的矛盾，爱需要在对话中升华。",
+      "date": "2024-02-01",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 13,
+      "title": "杭州女生的选择",
+      "content": "杭州一位女生为了爱情放弃了MIT的录取，最终却发现自己迷失了方向。爱情固然美好，但放弃自我价值观和人生目标的代价是无比惨痛的。",
+      "date": "2024-02-10",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 14,
+      "title": "信任危机",
+      "content": "一对夫妻因隐藏前任的礼物而引发离婚诉讼。夫妻之间的信任建立在透明和诚实之上，任何小谎言都可能导致信任的崩塌。",
+      "date": "2024-02-20",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 15,
+      "title": "成都情侣的监控",
+      "content": "成都一对情侣因查看手机定位而分手，法院对此作出判决，认为双方的隐私权应得到尊重。过度依赖和监控不仅会导致情感的失衡，还会让爱情变成牢笼。",
+      "date": "2024-03-05",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 16,
+      "title": "她来例假了",
+      "content": "不要只说\"多喝热水\"，要说\"我给你买了红糖姜茶和暖宝宝，还有你爱吃的小蛋糕，等我一下就到\"",
+      "date": "2024-03-01",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 17,
+      "title": "她心情不好",
+      "content": "不要问\"你怎么了\"，要说\"我知道你现在很难受，我陪着你，想说话就说，不想说就靠在我身上\"",
+      "date": "2024-03-05",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 18,
+      "title": "她生气了",
+      "content": "不要讲道理，直接说\"我错了，你想怎么罚我都行，不要生气了好不好\"",
+      "date": "2024-03-10",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 19,
+      "title": "她想你了",
+      "content": "不要说\"我也想你\"，要说\"我马上买票去找你，等我\"",
+      "date": "2024-03-15",
+      "mood": "浪漫",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 20,
+      "title": "她累了",
+      "content": "不要说\"休息一下\"，要说\"我来帮你按按肩膀，你好好休息\"",
+      "date": "2024-03-20",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 21,
+      "title": "她受委屈了",
+      "content": "不要说\"别跟她一般见识\"，要说\"谁欺负你了？我帮你出气\"",
+      "date": "2024-03-25",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 22,
+      "title": "她考试失利",
+      "content": "不要说\"下次加油\"，要说\"一次考试而已，你在我心里永远是最棒的，走，我带你去吃好吃的\"",
+      "date": "2024-04-01",
+      "mood": "开心",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 23,
+      "title": "她失眠了",
+      "content": "不要说\"早点睡\"，要说\"我陪你聊聊天，等你睡着了我再挂\"",
+      "date": "2024-04-05",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 24,
+      "title": "她饿了",
+      "content": "不要说\"去吃东西\"，要说\"你想吃什么？我给你订外卖/我带你去吃\"",
+      "date": "2024-04-10",
+      "mood": "开心",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 25,
+      "title": "她害怕了",
+      "content": "不要说\"别怕\"，要说\"有我在，我会一直陪着你\"",
+      "date": "2024-04-15",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 26,
+      "title": "查岗式聊天",
+      "content": "错误：\"你在哪？跟谁在一起？什么时候回来？\" 正确：\"在干嘛呢？想你了\"",
+      "date": "2024-02-01",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 27,
+      "title": "敷衍式回复",
+      "content": "错误：\"哦\"\"嗯\"\"好的\" 正确：\"哇，这个好有趣！\"\"原来是这样！\"\"太厉害了！\"",
+      "date": "2024-02-05",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 28,
+      "title": "讲道理式哄人",
+      "content": "错误：\"你听我跟你讲道理...\" 正确：\"我错了，你说什么都对\"",
+      "date": "2024-02-10",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 29,
+      "title": "冷战式处理",
+      "content": "错误：不回消息、冷战 正确：主动沟通，即使只是说\"我们聊聊好吗\"",
+      "date": "2024-02-15",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 30,
+      "title": "比较式伤害",
+      "content": "错误：\"你看别人多好\" 正确：\"你在我心里是最好的\"",
+      "date": "2024-02-20",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:19:26"
+    },
+    {
+      "id": 31,
+      "title": "第一次视频约会",
+      "content": "我们第一次视频约会，我特意打扮了一下，她也很用心。我们一起看了一部电影，边看边聊，感觉就像在身边一样。虽然隔着屏幕，但能看到她的笑容，我就很满足了。",
+      "date": "2024-01-05",
+      "mood": "开心",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 32,
+      "title": "第一次寄礼物",
+      "content": "她生日快到了，我精心挑选了一条她之前说过喜欢的项链。收到快递的那天，她拍了视频给我看，哭得稀里哗啦的，说我怎么这么懂她。那一刻，我觉得异地恋再辛苦也值得。",
+      "date": "2024-01-20",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 33,
+      "title": "一起跨年",
+      "content": "跨年那天，我们视频到十二点，一起倒数。虽然不能一起放烟花，但我们各自在自己的城市看着烟花，视频里一起许愿。她说希望我们能早点结束异地恋，我说一定会的。",
+      "date": "2024-01-01",
+      "mood": "浪漫",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 34,
+      "title": "吵架后的和好",
+      "content": "那次吵架吵得很凶，我们都很激动。挂了电话后我冷静了一下，觉得自己不应该那样。我给她发了很多条长长的消息，认真反思了自己的问题，也表达了我有多在乎她。第二天早上她回复了我，说她也有错，我们和好了。从那以后，我们约定吵架不过夜。",
+      "date": "2024-02-10",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 35,
+      "title": "第一次见面",
+      "content": "终于见面了！我在火车站等她，看到她出来的那一刻，我冲上去紧紧抱住了她。她在我怀里哭了，说终于见到我了。那几天我们过得特别开心，一起逛遍了我的城市。送她走的时候，我在火车站哭得像个傻子，但我知道，这只是暂时的。",
+      "date": "2024-02-14",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 36,
+      "title": "一起上网课",
+      "content": "这学期有一门课我们选了一样的，虽然不在一个学校，但我们会一起上课。老师提问时我们会在视频里小声讨论，下课了一起写作业。感觉就像真的同学一样。",
+      "date": "2024-02-20",
+      "mood": "开心",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 37,
+      "title": "图书馆打卡",
+      "content": "我们约定每天晚上一起去图书馆学习，视频开着静音，偶尔抬头看看对方。累了就在视频里比个心，或者发个消息鼓励一下对方。那段时间我们的成绩都进步了很多。",
+      "date": "2024-03-01",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 38,
+      "title": "一起晨跑",
+      "content": "我们约定每天早上6点半一起晨跑，虽然不在一个地方，但我们会同时开始，跑完步在视频里打卡。一开始我真的起不来，但想到她也在跑，我就有动力了。现在晨跑已经成了我们的习惯。",
+      "date": "2024-03-10",
+      "mood": "开心",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 39,
+      "title": "寄明信片",
+      "content": "我用学校的明信片写了一封长长的信给她，把我平时不好意思说的话都写下来了。她收到后拍给我看，说她哭了很久，把明信片夹在她的日记本里。现在我每到一个地方都会给她寄明信片。",
+      "date": "2024-03-15",
+      "mood": "浪漫",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 40,
+      "title": "共享美食",
+      "content": "我们发现两个学校食堂有一道很像的菜，于是约定同一天吃这道菜，视频里一起吃。虽然味道不完全一样，但感觉就像在一起吃饭一样。",
+      "date": "2024-03-20",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 41,
+      "title": "云逛校园",
+      "content": "我带着她逛了我的学校，从宿舍到教学楼，从食堂到图书馆，每一个地方都给她介绍。她说以后要来我的学校看看，走走我走过的路。",
+      "date": "2024-03-25",
+      "mood": "浪漫",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 42,
+      "title": "一起听讲座",
+      "content": "我们学校有一个线上讲座，我叫她一起听。听完后我们讨论了很久，分享了各自的想法。感觉我们的三观越来越合了。",
+      "date": "2024-04-01",
+      "mood": "开心",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 43,
+      "title": "她生病的时候",
+      "content": "她感冒发烧了，我特别着急，但又不在她身边。我给她订了药和粥，还一直陪着她视频，直到她睡着。第二天她好点了，说感觉我就在身边一样。",
+      "date": "2024-04-05",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 44,
+      "title": "我生日那天",
+      "content": "我生日那天，我以为她忘了。结果零点刚过，她给我发了一条很长的视频，是她提前录好的，还有她给我准备的礼物。我一个大男生，哭得稀里哗啦的。",
+      "date": "2024-04-10",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 45,
+      "title": "一起看星星",
+      "content": "那天晚上星星特别多，我拍了照片给她看。她说她们那里星星也很亮，于是我们视频一起看星星，对着星星许愿。那一刻，我觉得我们之间的距离一点都不远。",
+      "date": "2024-04-15",
+      "mood": "浪漫",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 46,
+      "title": "期末周一起熬夜",
+      "content": "期末周我们都很忙，每天一起熬夜复习。累了就在视频里聊几句，给对方加油打气。那段时间虽然辛苦，但有她陪着，我觉得很幸福。",
+      "date": "2024-04-20",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 47,
+      "title": "约定国庆见面",
+      "content": "我们早早地就开始规划国庆见面的行程，查攻略、订酒店、抢车票。每天都在倒计时，感觉日子过得特别慢，但一想到要见面了，就特别开心。",
+      "date": "2024-04-25",
+      "mood": "开心",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 48,
+      "title": "分享课程表",
+      "content": "我们把各自的课程表分享给对方，这样就能知道对方什么时候有空，不会打扰到对方上课。有时候看到对方没课，就会发个消息聊几句。",
+      "date": "2024-05-01",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 49,
+      "title": "一起参加线上活动",
+      "content": "我们报名参加了一个线上的知识竞赛，虽然不在一个队，但我们互相加油。最后我们都获奖了，特别开心。",
+      "date": "2024-05-05",
+      "mood": "开心",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 50,
+      "title": "互相送特产",
+      "content": "放假回来，我给她带了我们学校当地的特产，她也给我带了她们那里的好吃的。我们约定以后每次放假都要给对方带特产。",
+      "date": "2024-05-10",
+      "mood": "开心",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 51,
+      "title": "我吃醋了",
+      "content": "看到她和别的男生合影，我有点吃醋。我没有藏着掖着，直接告诉了她我的感受。她认真地跟我解释，还哄了我好久。从那以后，她会主动和我讲她和异性朋友的事情。",
+      "date": "2024-05-15",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 52,
+      "title": "她吃醋了",
+      "content": "我发了一张和女同学的合影，她吃醋了。我赶紧跟她解释，还主动把手机给她看。哄了她好久，她才开心起来。我知道她是在乎我才会吃醋。",
+      "date": "2024-05-20",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 53,
+      "title": "一起看日出",
+      "content": "我们约定早起一起看日出，虽然不在一个地方，但我们同时起床，视频一起看太阳升起。那一刻，我觉得特别浪漫。",
+      "date": "2024-05-25",
+      "mood": "浪漫",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 54,
+      "title": "一起追剧",
+      "content": "我们一起追一部剧，每天同步更新，看完就一起讨论剧情。有时候会为了剧中的人物争论，但都是笑着争论的。",
+      "date": "2024-06-01",
+      "mood": "有趣",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 55,
+      "title": "分享梦想",
+      "content": "我们聊到了各自的梦想，发现我们的目标很一致。我们约定一起努力，为了我们的未来奋斗。",
+      "date": "2024-06-05",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 56,
+      "title": "她陪我度过低谷",
+      "content": "那段时间我特别低落，觉得什么都不顺。她一直陪着我，鼓励我，听我倾诉。如果没有她，我真的不知道该怎么熬过来。",
+      "date": "2024-06-10",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 57,
+      "title": "我陪她度过低谷",
+      "content": "她那段时间状态不好，我每天都陪着她，听她说话，给她加油打气。看到她慢慢好起来，我特别开心。",
+      "date": "2024-06-15",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 58,
+      "title": "恋爱一周年",
+      "content": "恋爱一周年那天，我偷偷买了票去看她。当我出现在她面前的时候，她惊呆了，然后抱着我哭了很久。那是我过得最开心的一个纪念日。",
+      "date": "2024-06-20",
+      "mood": "浪漫",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 59,
+      "title": "一起做饭",
+      "content": "虽然异地，但我们视频一起学做同一道菜。我做砸了，她做得很好吃。我们笑着说等见面了她做给我吃。",
+      "date": "2024-06-25",
+      "mood": "有趣",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 60,
+      "title": "一起写作业",
+      "content": "我们有一门课的作业是一样的，于是视频一起写。遇到问题就一起讨论，感觉效率特别高。最后我们的作业都得了高分。",
+      "date": "2024-07-01",
+      "mood": "开心",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 61,
+      "title": "分享书单",
+      "content": "我们互相推荐好书，然后一起读，读完分享感受。通过读书，我们更了解对方了。",
+      "date": "2024-07-05",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 62,
+      "title": "一起听音乐",
+      "content": "我们创建了一个共享歌单，把喜欢的歌都加进去。有时候会一起听歌，分享自己喜欢的歌词。",
+      "date": "2024-07-10",
+      "mood": "浪漫",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 63,
+      "title": "她给我惊喜",
+      "content": "我生日那天，她偷偷订了蛋糕送到我的学校。当我收到蛋糕的时候，特别感动。虽然不在身边，但她的心意我收到了。",
+      "date": "2024-07-15",
+      "mood": "感动",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 64,
+      "title": "我给她惊喜",
+      "content": "她生日那天，我提前录了很多朋友的祝福视频，还有我自己准备的惊喜。她看完哭得稀里哗啦的，说这是她过得最开心的生日。",
+      "date": "2024-07-20",
+      "mood": "浪漫",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 65,
+      "title": "一起逛超市",
+      "content": "我们视频一起逛各自学校的超市，给对方看自己想买什么，就像真的在一起逛超市一样。",
+      "date": "2024-07-25",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 66,
+      "title": "一起打游戏",
+      "content": "我们一起玩一款游戏，虽然技术都不好，但玩得特别开心。有时候会一起坑队友，笑得不行。",
+      "date": "2024-08-01",
+      "mood": "有趣",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 67,
+      "title": "一起看电影",
+      "content": "我们找到一个可以同步播放的软件，周末一起看电影，边看边讨论，感觉就像在电影院一样。",
+      "date": "2024-08-05",
+      "mood": "开心",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 68,
+      "title": "一起去图书馆",
+      "content": "我们约定周末一起去各自学校的图书馆学习，视频开着，偶尔抬头看看对方，累了就休息一下聊聊天。",
+      "date": "2024-08-10",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 69,
+      "title": "分享日常照片",
+      "content": "我们每天都会拍一些日常照片发给对方，比如今天吃了什么，天气怎么样，看到了什么有趣的事情。虽然不在身边，但感觉参与了对方的生活。",
+      "date": "2024-08-15",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 70,
+      "title": "早晚安问候",
+      "content": "我们每天都会说早安和晚安，即使再忙也不会忘记。这已经成了我们的习惯，感觉每一天都是从她开始，以她结束。",
+      "date": "2024-08-20",
+      "mood": "浪漫",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 71,
+      "title": "一起备考",
+      "content": "我们一起准备四六级考试，每天一起背单词，互相听写，互相批改。最后我们都考了不错的成绩。",
+      "date": "2024-08-25",
+      "mood": "开心",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 72,
+      "title": "一起做饭比赛",
+      "content": "我们视频一起做同一道菜，看谁做得更好吃。虽然我输了，但我们都很开心。",
+      "date": "2024-09-01",
+      "mood": "有趣",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 73,
+      "title": "分享课堂笔记",
+      "content": "我们会把各自整理的课堂笔记分享给对方，互相学习，共同进步。",
+      "date": "2024-09-05",
+      "mood": "温馨",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 74,
+      "title": "一起参加线上比赛",
+      "content": "我们一起参加了一个线上编程比赛，虽然没有获奖，但过程很开心，我们一起努力的感觉特别好。",
+      "date": "2024-09-10",
+      "mood": "开心",
+      "created_at": "2026-02-18 03:25:22"
+    },
+    {
+      "id": 75,
+      "title": "约定下次见面",
+      "content": "我们已经开始规划寒假见面的行程了，每天都在倒计时，期待见面的那天。",
+      "date": "2024-09-15",
+      "mood": "开心",
+      "created_at": "2026-02-18 03:25:22"
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "title": "记住重要日期",
+      "content": "生日、纪念日等重要日期一定要记住",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 2,
+      "title": "倾听很重要",
+      "content": "当她说话时，认真倾听，不要打断",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 3,
+      "title": "小惊喜",
+      "content": "偶尔准备一些小惊喜，不需要太贵重",
+      "priority": "中",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 4,
+      "title": "不要冷战",
+      "content": "吵架后不要冷战，主动沟通解决问题",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 5,
+      "title": "不要讲道理",
+      "content": "她生气时不要讲道理，先哄好再说",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 6,
+      "title": "不要敷衍",
+      "content": "不要说\"多喝热水\"这种敷衍的话",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 7,
+      "title": "不要和异性暧昧",
+      "content": "和其他异性保持适当距离",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 8,
+      "title": "不要拿她和别人比较",
+      "content": "不要说\"你看别人多好\"这种话",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 9,
+      "title": "不要忘记纪念日",
+      "content": "纪念日一定要有所表示",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 10,
+      "title": "不要翻旧账",
+      "content": "吵架时不要翻旧账",
+      "priority": "中",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 11,
+      "title": "不要说谎",
+      "content": "即使是善意的谎言也尽量不要说",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 12,
+      "title": "不要忽略她的感受",
+      "content": "多关注她的情绪变化",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 13,
+      "title": "不要太自私",
+      "content": "多为她着想",
+      "priority": "中",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 14,
+      "title": "不要太大男子主义",
+      "content": "平等对待，互相尊重",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 15,
+      "title": "不要说脏话",
+      "content": "在她面前保持礼貌",
+      "priority": "中",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 16,
+      "title": "不要沉迷游戏",
+      "content": "不要因为游戏忽略她",
+      "priority": "中",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 17,
+      "title": "不要总是玩手机",
+      "content": "在一起时多陪陪她",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 18,
+      "title": "不要敷衍了事",
+      "content": "答应的事情要做到",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 19,
+      "title": "不要贬低她",
+      "content": "多夸奖，少批评",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 20,
+      "title": "不要轻易说分手",
+      "content": "分手两个字不要轻易说出口",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 21,
+      "title": "站立时双脚分的不够开",
+      "content": "站立时双脚并得太拢显示出你害怕侵犯到别人的空间，大概最好分开半米左右",
+      "priority": "中",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 22,
+      "title": "说话时使用过度的手势",
+      "content": "手势比划太多好像你是在打手语，显示你害怕仅仅是讲话不能保持住别人的注意力",
+      "priority": "低",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 23,
+      "title": "向女人前倾",
+      "content": "在和女人讲话时，身体微微向前冲，试图更接近她，这是把对方社交价值看得比自己高的表现",
+      "priority": "中",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 24,
+      "title": "追赶女人",
+      "content": "女人一边回话一边继续走，你不要跟上去追，如果女人身体移开你，你也要移开你的身体",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 25,
+      "title": "容忍女人做你不喜欢的事",
+      "content": "假装无所谓，给美女特别待遇，女人在察觉这类事情上天生比男人灵敏10倍",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 26,
+      "title": "不要渣",
+      "content": "没发生关系前，宝贝长宝贝短，发生关系后就说分手，这是渣",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 27,
+      "title": "不要站在道德最高点",
+      "content": "把自己置于道德最高点对别人的生活指手画脚，这种行为真的很掉价",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 28,
+      "title": "不要做嘴强王者",
+      "content": "语言上的巨人，话从来就没有兑现过，什么买买买请吃饭都是骗人的",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 29,
+      "title": "不要太油腻",
+      "content": "刚见面根本不熟就有肢体接触，开门揽一下肩膀，过马路拉个手，上电梯搂个腰，这些行为会让人觉得油腻恶心",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 30,
+      "title": "不要过度自黑",
+      "content": "自黑是一种娱乐开玩笑的方式，但不要黑得特别严重，总是自损自我贬低",
+      "priority": "低",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 31,
+      "title": "不要总是给对方解决问题",
+      "content": "女生迷茫时不要去指点人生迷津，规划未来，她需要的是倾听和陪伴",
+      "priority": "中",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 32,
+      "title": "不要说\"别闹了\"",
+      "content": "她红着眼眶，你要真敢回\"别闹了\"，基本等于原地自爆",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 33,
+      "title": "不要只说对不起",
+      "content": "光说\"对不起\"已被列为\"最敷衍回复TOP1\"，要拿出实际行动",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 34,
+      "title": "不要让手机替你谈恋爱",
+      "content": "AI给你五个选项，你挑最不像AI的那条，自己再改俩字，发出去后立刻线下出现",
+      "priority": "中",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 35,
+      "title": "不要冷处理",
+      "content": "女生莫名其妙不开心的时候去问她为何不开心，学会放下你的身姿去哄哄她",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 36,
+      "title": "不要无原则顺从",
+      "content": "哄女人开心，并不是一味的无原则的顺从，那样女人会看不起你",
+      "priority": "中",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 37,
+      "title": "不要说要死要活的话",
+      "content": "不要对女孩说什么我的生命是你的，没有你我也活不了之类的话，女生最讨厌一个男孩子在她面前要死要活的没出息",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 38,
+      "title": "不要敷衍评价",
+      "content": "她穿什么衣服化什么妆问你怎么样，你一定要说\"好看\"，但这两个字远远不够，还要添油加醋的大吹一番",
+      "priority": "中",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 39,
+      "title": "不要小气",
+      "content": "不管任何事首先要替她着想，不要想着自己会吃亏之类的，这样就显得小气了",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 40,
+      "title": "经期要包容",
+      "content": "女生经期前的一周里，情绪常常是不可控的，不管她怎么歇斯底里，不讲道理，喜怒无常，你都要包容她",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 41,
+      "title": "不要翻旧账",
+      "content": "遇到问题不要纠结对错，赢了争吵的那一方，却在不知不觉中输掉了感情",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 42,
+      "title": "不要只讲道理",
+      "content": "女生通常都是比较感性的，男生则偏于理性，遇到问题男生喜欢讲道理，而女生更看重的是态度",
+      "priority": "高",
+      "created_at": "2026-02-18 03:13:45"
+    }
+  ],
+  "countdowns": [
+    {
+      "id": 1,
+      "name": "恋爱纪念日",
+      "date": "2024-06-15",
+      "type": "anniversary",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 2,
+      "name": "她的生日",
+      "date": "2024-08-20",
+      "type": "birthday",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 3,
+      "name": "下次约会",
+      "date": "2024-03-10",
+      "type": "date",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 4,
+      "name": "情人节",
+      "date": "2025-02-14",
+      "type": "anniversary",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 5,
+      "name": "520",
+      "date": "2025-05-20",
+      "type": "anniversary",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 6,
+      "name": "七夕节",
+      "date": "2025-08-29",
+      "type": "anniversary",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 7,
+      "name": "圣诞节",
+      "date": "2025-12-25",
+      "type": "other",
+      "created_at": "2026-02-18 03:13:45"
+    },
+    {
+      "id": 8,
+      "name": "跨年",
+      "date": "2026-01-01",
+      "type": "other",
+      "created_at": "2026-02-18 03:13:45"
+    }
+  ]
+}
