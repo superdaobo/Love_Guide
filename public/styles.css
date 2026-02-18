@@ -45,6 +45,7 @@ body {
 .navbar {
     background: var(--gradient-primary);
     padding: 1rem 2rem;
+    padding-top: calc(1rem + var(--safe-area-top));
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1157,6 +1158,7 @@ body {
     
     .main-content {
         padding: 1rem;
+        padding-top: calc(1rem + var(--safe-area-top));
         padding-bottom: calc(80px + var(--safe-area-bottom));
     }
     
