@@ -112,9 +112,11 @@ jobs:
           npx cap sync ios
       
       - name: Build iOS App (Unsigned)
+        id: build_ios
         run: |
           cd ios/App
-          xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug -sdk iphoneos -arch arm64 CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" clean build
+          xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug -sdk iphoneos -arch arm64 -derivedDataPath build CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" clean build 2>&1 | tee build.log
+          echo "build_exit_code=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
         continue-on-error: true
       
       - name: Create Unsigned IPA
@@ -127,9 +129,6 @@ jobs:
             echo "Found App.app at: $APP_PATH"
             mkdir -p release/Payload
             cp -r "$APP_PATH" release/Payload/
-            if [ -f "database.sqlite" ]; then
-              cp database.sqlite release/Payload/App.app/
-            fi
             cd release
             zip -r love-relationship-manager-ios.ipa Payload
             rm -rf Payload
@@ -139,6 +138,9 @@ jobs:
             if [ -d "ios/App" ]; then
               cd ios/App
               zip -r ../../release/love-relationship-manager-ios-xcode.zip .
+              echo "Xcode project zip created"
+            else
+              echo "No iOS project found" > ../release/ios-build-failed.txt
             fi
           fi
         shell: bash
