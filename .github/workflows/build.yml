@@ -30,6 +30,9 @@ jobs:
           cp -r public/* dist/web/
           cp server.js dist/web/
           cp package.json dist/web/
+          if [ -f "database.sqlite" ]; then
+            cp database.sqlite dist/web/
+          fi
           
       - name: Upload web artifacts
         uses: actions/upload-artifact@v4
@@ -59,10 +62,13 @@ jobs:
       
       - name: Create Windows package
         run: |
-          mkdir -p release/love-relationship-manager
-          cp -r dist/web/* release/love-relationship-manager/
-          cp package.json release/love-relationship-manager/
-          Compress-Archive -Path release/love-relationship-manager -DestinationPath release/love-relationship-manager-windows.zip
+          New-Item -ItemType Directory -Force -Path "release/love-relationship-manager"
+          Copy-Item -Recurse -Force "dist/web/*" "release/love-relationship-manager/"
+          Copy-Item -Force "package.json" "release/love-relationship-manager/"
+          if (Test-Path "database.sqlite") {
+            Copy-Item -Force "database.sqlite" "release/love-relationship-manager/"
+          }
+          Compress-Archive -Path "release/love-relationship-manager" -DestinationPath "release/love-relationship-manager-windows.zip"
         shell: pwsh
       
       - name: Upload Windows artifacts
@@ -105,15 +111,35 @@ jobs:
           npx cap add ios || true
           npx cap sync ios
       
-      - name: Create iOS package
+      - name: Build iOS App (Unsigned)
+        run: |
+          cd ios/App
+          xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug -sdk iphoneos -arch arm64 CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" clean build
+        continue-on-error: true
+      
+      - name: Create Unsigned IPA
         run: |
           mkdir -p release
-          if [ -d "ios/App" ]; then
-            cd ios/App
-            zip -r ../../release/love-relationship-manager-ios-xcode.zip .
+          
+          APP_PATH=$(find ios/App/build -name "App.app" -type d 2>/dev/null | head -1)
+          
+          if [ -n "$APP_PATH" ] && [ -d "$APP_PATH" ]; then
+            echo "Found App.app at: $APP_PATH"
+            mkdir -p release/Payload
+            cp -r "$APP_PATH" release/Payload/
+            if [ -f "database.sqlite" ]; then
+              cp database.sqlite release/Payload/App.app/
+            fi
+            cd release
+            zip -r love-relationship-manager-ios.ipa Payload
+            rm -rf Payload
+            echo "IPA created successfully"
           else
-            echo "iOS App folder not found, creating placeholder"
-            echo "iOS build requires manual setup" > release/ios-build-info.txt
+            echo "App.app not found, creating Xcode project zip instead"
+            if [ -d "ios/App" ]; then
+              cd ios/App
+              zip -r ../../release/love-relationship-manager-ios-xcode.zip .
+            fi
           fi
         shell: bash
       
@@ -173,6 +199,9 @@ jobs:
           mkdir -p release
           if [ -f "android/app/build/outputs/apk/debug/app-debug.apk" ]; then
             cp android/app/build/outputs/apk/debug/app-debug.apk release/love-relationship-manager-android.apk
+            if [ -f "database.sqlite" ]; then
+              echo "Note: database.sqlite should be imported via app settings"
+            fi
           else
             cd android
             zip -r ../release/love-relationship-manager-android-project.zip .
@@ -236,7 +265,7 @@ jobs:
           echo "version=$VERSION" >> $GITHUB_OUTPUT
       
       - name: List artifacts
-        run: ls -la artifacts/
+        run: ls -laR artifacts/
       
       - name: Create Release
         uses: softprops/action-gh-release@v1
@@ -248,8 +277,8 @@ jobs:
             
             ### 📱 下载
             - **Windows**: love-relationship-manager-windows.zip
-            - **Android**: love-relationship-manager-android.apk 或 android-project.zip
-            - **iOS**: love-relationship-manager-ios-xcode.zip (需要自行用Xcode打开编译)
+            - **Android**: love-relationship-manager-android.apk
+            - **iOS**: love-relationship-manager-ios.ipa (未签名IPA，需要自签名安装)
             - **Web**: web-build.zip
             
             ### ✨ 功能特点
@@ -259,11 +288,17 @@ jobs:
             - 🤖 AI 恋爱顾问
             - ⏰ 重要倒数日提醒
             - 📱 移动端优化
+            - 💾 全平台数据导入/导出
             
             ### 🚀 使用方法
-            1. 下载对应平台的压缩包
-            2. 解压后运行 `npm install && npm start`
-            3. 访问 http://localhost:3000
+            1. 下载对应平台的安装包
+            2. Windows: 解压后运行 `npm install && npm start`
+            3. Android: 直接安装 APK
+            4. iOS: 使用 AltStore 或其他工具自签名安装 IPA
+            5. 访问 http://localhost:3000
+            
+            ### 📊 数据迁移
+            在设置页面可以导入/导出数据，支持全平台通用
           files: |
             artifacts/windows-build/*
             artifacts/android-build/*

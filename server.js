@@ -406,6 +406,103 @@ app.get('/api/stats', (req, res) => {
     });
 });
 
+app.get('/api/export-database', (req, res) => {
+    if (!fs.existsSync(DB_FILE)) {
+        return res.status(404).json({ error: '数据库文件不存在' });
+    }
+    res.download(DB_FILE, `love-database-${new Date().toISOString().split('T')[0]}.sqlite`);
+});
+
+app.post('/api/import-database', (req, res) => {
+    if (!req.body.database) {
+        return res.status(400).json({ error: '未提供数据库数据' });
+    }
+    
+    try {
+        const buffer = Buffer.from(req.body.database, 'base64');
+        fs.writeFileSync(DB_FILE, buffer);
+        
+        const SQL = require('sql.js');
+        initSqlJs().then(SQL => {
+            db = new SQL.Database(buffer);
+            res.json({ success: true, message: '数据库导入成功' });
+        });
+    } catch (error) {
+        res.status(500).json({ error: '数据库导入失败: ' + error.message });
+    }
+});
+
+app.get('/api/export-json', (req, res) => {
+    const data = {
+        version: '1.0',
+        exportDate: new Date().toISOString(),
+        methods: queryAll('SELECT * FROM methods'),
+        cases: queryAll('SELECT * FROM cases'),
+        notes: queryAll('SELECT * FROM notes'),
+        countdowns: queryAll('SELECT * FROM countdowns'),
+        aiConfig: queryOne('SELECT * FROM ai_config WHERE id = 1'),
+        chatHistory: queryAll('SELECT * FROM chat_history ORDER BY created_at ASC')
+    };
+    res.json(data);
+});
+
+app.post('/api/import-json', (req, res) => {
+    const data = req.body;
+    
+    try {
+        if (data.methods && Array.isArray(data.methods)) {
+            runSql('DELETE FROM methods');
+            data.methods.forEach(m => {
+                db.run('INSERT INTO methods (id, title, description, category, difficulty, created_at) VALUES (?, ?, ?, ?, ?, ?)',
+                    [m.id, m.title, m.description, m.category, m.difficulty, m.created_at]);
+            });
+        }
+        
+        if (data.cases && Array.isArray(data.cases)) {
+            runSql('DELETE FROM cases');
+            data.cases.forEach(c => {
+                db.run('INSERT INTO cases (id, title, content, date, mood, created_at) VALUES (?, ?, ?, ?, ?, ?)',
+                    [c.id, c.title, c.content, c.date, c.mood, c.created_at]);
+            });
+        }
+        
+        if (data.notes && Array.isArray(data.notes)) {
+            runSql('DELETE FROM notes');
+            data.notes.forEach(n => {
+                db.run('INSERT INTO notes (id, title, content, priority, created_at) VALUES (?, ?, ?, ?, ?)',
+                    [n.id, n.title, n.content, n.priority, n.created_at]);
+            });
+        }
+        
+        if (data.countdowns && Array.isArray(data.countdowns)) {
+            runSql('DELETE FROM countdowns');
+            data.countdowns.forEach(c => {
+                db.run('INSERT INTO countdowns (id, name, date, type, created_at) VALUES (?, ?, ?, ?, ?)',
+                    [c.id, c.name, c.date, c.type, c.created_at]);
+            });
+        }
+        
+        if (data.aiConfig) {
+            runSql('DELETE FROM ai_config');
+            db.run('INSERT INTO ai_config (id, api_key, api_endpoint, model, system_prompt) VALUES (1, ?, ?, ?, ?)',
+                [data.aiConfig.api_key || '', data.aiConfig.api_endpoint, data.aiConfig.model, data.aiConfig.system_prompt]);
+        }
+        
+        if (data.chatHistory && Array.isArray(data.chatHistory)) {
+            runSql('DELETE FROM chat_history');
+            data.chatHistory.forEach(h => {
+                db.run('INSERT INTO chat_history (role, content, created_at) VALUES (?, ?, ?)',
+                    [h.role, h.content, h.created_at]);
+            });
+        }
+        
+        saveDatabase();
+        res.json({ success: true, message: '数据导入成功' });
+    } catch (error) {
+        res.status(500).json({ error: '数据导入失败: ' + error.message });
+    }
+});
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });

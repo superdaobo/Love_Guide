@@ -849,6 +849,78 @@ body {
     flex-wrap: wrap;
 }
 
+.data-actions .secondary-btn,
+.data-actions .danger-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.25rem;
+    min-width: 160px;
+}
+
+.data-actions .secondary-btn span,
+.data-actions .danger-btn span {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.data-actions .secondary-btn small,
+.data-actions .danger-btn small {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-weight: normal;
+}
+
+.danger-btn {
+    background: var(--danger-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.danger-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.danger-zone {
+    border: 2px solid var(--danger-color);
+    background: #fff5f5;
+}
+
+.danger-zone h2 {
+    color: var(--danger-color);
+}
+
+.settings-desc {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.info-card {
+    background: #f0f7ff;
+    border: 1px solid #b3d7ff;
+}
+
+.info-card h2 {
+    color: #1976d2;
+}
+
+.info-content p {
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.info-content p:last-child {
+    margin-bottom: 0;
+}
+
 .modal {
     position: fixed;
     top: 0;

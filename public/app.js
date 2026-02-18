@@ -410,13 +410,8 @@ createApp({
 
         const exportData = async () => {
             try {
-                const data = {
-                    methods: methods.value,
-                    cases: cases.value,
-                    notes: notes.value,
-                    countdowns: countdowns.value,
-                    aiConfig: aiConfig.value
-                };
+                const response = await axios.get('/api/export-json');
+                const data = response.data;
                 const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
@@ -430,6 +425,21 @@ createApp({
             }
         };
 
+        const exportDatabase = async () => {
+            try {
+                const response = await axios.get('/api/export-database', { responseType: 'blob' });
+                const url = URL.createObjectURL(response.data);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `love-database-${new Date().toISOString().split('T')[0]}.sqlite`;
+                a.click();
+                URL.revokeObjectURL(url);
+                showToast('数据库导出成功');
+            } catch (error) {
+                showToast('导出失败', 'error');
+            }
+        };
+
         const importData = async (event) => {
             const file = event.target.files[0];
             if (!file) return;
@@ -438,32 +448,13 @@ createApp({
             reader.onload = async (e) => {
                 try {
                     const data = JSON.parse(e.target.result);
-                    
-                    if (data.methods) {
-                        for (const method of data.methods) {
-                            await axios.post('/api/methods', method);
-                        }
-                    }
-                    if (data.cases) {
-                        for (const caseItem of data.cases) {
-                            await axios.post('/api/cases', caseItem);
-                        }
-                    }
-                    if (data.notes) {
-                        for (const note of data.notes) {
-                            await axios.post('/api/notes', note);
-                        }
-                    }
-                    if (data.countdowns) {
-                        for (const countdown of data.countdowns) {
-                            await axios.post('/api/countdowns', countdown);
-                        }
-                    }
-                    
+                    await axios.post('/api/import-json', data);
                     loadMethods();
                     loadCases();
                     loadNotes();
                     loadCountdowns();
+                    loadAIConfig();
+                    loadChatHistory();
                     loadStats();
                     showToast('数据导入成功');
                 } catch (error) {
@@ -472,6 +463,58 @@ createApp({
             };
             reader.readAsText(file);
             event.target.value = '';
+        };
+
+        const importDatabase = async (event) => {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = async (e) => {
+                try {
+                    const base64 = btoa(
+                        new Uint8Array(e.target.result).reduce(
+                            (data, byte) => data + String.fromCharCode(byte), ''
+                        )
+                    );
+                    await axios.post('/api/import-database', { database: base64 });
+                    loadMethods();
+                    loadCases();
+                    loadNotes();
+                    loadCountdowns();
+                    loadAIConfig();
+                    loadChatHistory();
+                    loadStats();
+                    showToast('数据库导入成功，页面将刷新');
+                    setTimeout(() => window.location.reload(), 1500);
+                } catch (error) {
+                    showToast('数据库导入失败', 'error');
+                }
+            };
+            reader.readAsArrayBuffer(file);
+            event.target.value = '';
+        };
+
+        const clearAllData = async () => {
+            if (!confirm('确定要清空所有数据吗？此操作不可恢复！')) return;
+            if (!confirm('再次确认：这将删除所有方法、案例、注意事项和倒数日！')) return;
+            
+            try {
+                await axios.delete('/api/methods');
+                await axios.delete('/api/cases');
+                await axios.delete('/api/notes');
+                await axios.delete('/api/countdowns');
+                await axios.delete('/api/chat-history');
+                loadMethods();
+                loadCases();
+                loadNotes();
+                loadCountdowns();
+                loadChatHistory();
+                loadStats();
+                showToast('所有数据已清空');
+            } catch (error) {
+                showToast('清空失败', 'error');
+            }
         };
 
         onMounted(() => {
@@ -539,7 +582,10 @@ createApp({
             sendMessage,
             clearChatHistory,
             exportData,
-            importData
+            exportDatabase,
+            importData,
+            importDatabase,
+            clearAllData
         };
     }
 }).mount('#app');
