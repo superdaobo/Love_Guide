@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#ff6b9d">
+    <title>恋爱关系管理系统</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar">
+            <div class="nav-brand">💕 恋爱关系管理系统</div>
+            <div class="nav-links">
+                <a v-for="item in navItems" :key="item.id"
+                   :href="'#' + item.id" 
+                   :class="['nav-link', { active: currentSection === item.id }]"
+                   @click.prevent="showSection(item.id)">
+                    {{ item.icon }} {{ item.name }}
+                </a>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <transition name="fade" mode="out-in">
+                <section v-if="currentSection === 'home'" key="home" class="section active">
+                    <div class="section-header">
+                        <h1>💕 欢迎使用恋爱关系管理系统</h1>
+                        <p class="subtitle">让爱情更加甜蜜，让关系更加稳固</p>
+                    </div>
+                    
+                    <div class="dashboard">
+                        <div class="dashboard-card">
+                            <div class="card-icon">💝</div>
+                            <h3>增进感情方法</h3>
+                            <p>{{ stats.methodsCount }}</p>
+                            <span>个方法</span>
+                        </div>
+                        <div class="dashboard-card">
+                            <div class="card-icon">📝</div>
+                            <h3>交流案例</h3>
+                            <p>{{ stats.casesCount }}</p>
+                            <span>个案例</span>
+                        </div>
+                        <div class="dashboard-card">
+                            <div class="card-icon">⚠️</div>
+                            <h3>注意事项</h3>
+                            <p>{{ stats.notesCount }}</p>
+                            <span>条提醒</span>
+                        </div>
+                        <div class="dashboard-card">
+                            <div class="card-icon">⏰</div>
+                            <h3>即将到来</h3>
+                            <p>{{ stats.nextCountdown ? stats.nextCountdown.daysLeft : '-' }}</p>
+                            <span>{{ stats.nextCountdown ? stats.nextCountdown.name : '暂无倒数日' }}</span>
+                        </div>
+                    </div>
+
+                    <div class="quick-actions">
+                        <h2>🚀 快速操作</h2>
+                        <div class="action-buttons">
+                            <button class="action-btn" @click="showSection('methods')">
+                                <span class="btn-icon">➕</span>
+                                添加新方法
+                            </button>
+                            <button class="action-btn" @click="showSection('cases')">
+                                <span class="btn-icon">📖</span>
+                                记录案例
+                            </button>
+                            <button class="action-btn" @click="showSection('countdowns')">
+                                <span class="btn-icon">📅</span>
+                                添加倒数日
+                            </button>
+                            <button class="action-btn" @click="showSection('ai-chat')">
+                                <span class="btn-icon">🤖</span>
+                                AI咨询
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <section v-else-if="currentSection === 'methods'" key="methods" class="section active">
+                    <div class="section-header">
+                        <h1>💝 增进感情方法</h1>
+                        <p class="subtitle">收集和整理让感情升温的方法</p>
+                    </div>
+                    
+                    <div class="filter-bar">
+                        <select v-model="methodFilter">
+                            <option value="">所有分类</option>
+                            <option value="日常">日常</option>
+                            <option value="娱乐">娱乐</option>
+                            <option value="出行">出行</option>
+                            <option value="浪漫">浪漫</option>
+                            <option value="成长">成长</option>
+                            <option value="异地恋">异地恋</option>
+                        </select>
+                        <button class="primary-btn" @click="openMethodModal()">+ 添加方法</button>
+                    </div>
+
+                    <div class="card-grid">
+                        <div v-for="method in filteredMethods" :key="method.id" class="card">
+                            <div class="card-header">
+                                <h3>{{ method.title }}</h3>
+                                <span :class="['badge', 'category-' + method.category]">{{ method.category }}</span>
+                            </div>
+                            <p class="card-content">{{ method.description }}</p>
+                            <div class="card-footer">
+                                <span :class="['difficulty', 'difficulty-' + method.difficulty]">
+                                    难度: {{ method.difficulty }}
+                                </span>
+                                <div class="card-actions">
+                                    <button class="icon-btn" @click="openMethodModal(method)">✏️</button>
+                                    <button class="icon-btn danger" @click="deleteMethod(method.id)">🗑️</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section v-else-if="currentSection === 'cases'" key="cases" class="section active">
+                    <div class="section-header">
+                        <h1>📝 交流案例</h1>
+                        <p class="subtitle">记录美好的交流瞬间，积累经验</p>
+                    </div>
+                    
+                    <div class="filter-bar">
+                        <select v-model="caseFilter">
+                            <option value="">所有心情</option>
+                            <option value="开心">开心</option>
+                            <option value="感动">感动</option>
+                            <option value="温馨">温馨</option>
+                            <option value="有趣">有趣</option>
+                        </select>
+                        <button class="primary-btn" @click="openCaseModal()">+ 添加案例</button>
+                    </div>
+
+                    <div class="timeline">
+                        <div v-for="caseItem in filteredCases" :key="caseItem.id" class="timeline-item">
+                            <div class="timeline-date">{{ caseItem.date }}</div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>{{ caseItem.title }}</h3>
+                                    <span :class="['mood-tag', 'mood-' + caseItem.mood]">{{ caseItem.mood }}</span>
+                                </div>
+                                <p>{{ caseItem.content }}</p>
+                                <div class="timeline-actions">
+                                    <button class="icon-btn" @click="openCaseModal(caseItem)">✏️</button>
+                                    <button class="icon-btn danger" @click="deleteCase(caseItem.id)">🗑️</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section v-else-if="currentSection === 'notes'" key="notes" class="section active">
+                    <div class="section-header">
+                        <h1>⚠️ 注意事项</h1>
+                        <p class="subtitle">记住这些重要的事情，避免踩雷</p>
+                    </div>
+                    
+                    <div class="filter-bar">
+                        <select v-model="noteFilter">
+                            <option value="">所有优先级</option>
+                            <option value="高">高优先级</option>
+                            <option value="中">中优先级</option>
+                            <option value="低">低优先级</option>
+                        </select>
+                        <button class="primary-btn" @click="openNoteModal()">+ 添加事项</button>
+                    </div>
+
+                    <div class="note-list">
+                        <div v-for="note in filteredNotes" :key="note.id" class="note-card">
+                            <div :class="['priority-indicator', 'priority-' + note.priority]"></div>
+                            <div class="note-content">
+                                <div class="note-header">
+                                    <h3>{{ note.title }}</h3>
+                                    <span :class="['priority-tag', 'priority-' + note.priority]">
+                                        {{ note.priority }}优先级
+                                    </span>
+                                </div>
+                                <p>{{ note.content }}</p>
+                                <div class="note-actions">
+                                    <button class="icon-btn" @click="openNoteModal(note)">✏️</button>
+                                    <button class="icon-btn danger" @click="deleteNote(note.id)">🗑️</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section v-else-if="currentSection === 'countdowns'" key="countdowns" class="section active">
+                    <div class="section-header">
+                        <h1>⏰ 重要倒数日</h1>
+                        <p class="subtitle">不要错过任何重要的日子</p>
+                    </div>
+                    
+                    <div class="filter-bar">
+                        <select v-model="countdownFilter">
+                            <option value="">所有类型</option>
+                            <option value="anniversary">纪念日</option>
+                            <option value="birthday">生日</option>
+                            <option value="date">约会</option>
+                            <option value="other">其他</option>
+                        </select>
+                        <button class="primary-btn" @click="openCountdownModal()">+ 添加倒数日</button>
+                    </div>
+
+                    <div class="countdown-grid">
+                        <div v-for="countdown in filteredCountdowns" :key="countdown.id" 
+                             :class="['countdown-card', { 'passed': countdown.daysLeft < 0 }]">
+                            <div class="countdown-icon">
+                                {{ countdown.type === 'anniversary' ? '💑' : countdown.type === 'birthday' ? '🎂' : countdown.type === 'date' ? '🌹' : '📅' }}
+                            </div>
+                            <div class="countdown-info">
+                                <h3>{{ countdown.name }}</h3>
+                                <p class="countdown-date">{{ countdown.date }}</p>
+                            </div>
+                            <div class="countdown-days">
+                                <span v-if="countdown.daysLeft > 0" class="days-number">{{ countdown.daysLeft }}</span>
+                                <span v-else-if="countdown.daysLeft === 0" class="days-today">今天!</span>
+                                <span v-else class="days-passed">已过 {{ Math.abs(countdown.daysLeft) }} 天</span>
+                                <span v-if="countdown.daysLeft > 0" class="days-label">天后</span>
+                            </div>
+                            <div class="countdown-actions">
+                                <button class="icon-btn" @click="openCountdownModal(countdown)">✏️</button>
+                                <button class="icon-btn danger" @click="deleteCountdown(countdown.id)">🗑️</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section v-else-if="currentSection === 'ai-chat'" key="ai-chat" class="section active">
+                    <div class="section-header">
+                        <h1>🤖 AI 恋爱顾问</h1>
+                        <p class="subtitle">智能助手帮你解答恋爱中的困惑</p>
+                    </div>
+                    
+                    <div class="chat-container">
+                        <div class="chat-messages" ref="chatContainer">
+                            <div v-if="chatHistory.length === 0" class="chat-empty">
+                                <p>👋 你好！我是你的恋爱顾问，有什么可以帮你的吗？</p>
+                            </div>
+                            <div v-for="(msg, index) in chatHistory" :key="index"
+                                 :class="['chat-message', msg.role]">
+                                <div class="message-avatar">
+                                    {{ msg.role === 'user' ? '👤' : '🤖' }}
+                                </div>
+                                <div class="message-content">
+                                    <p>{{ msg.content }}</p>
+                                </div>
+                            </div>
+                            <div v-if="isTyping" class="chat-message assistant">
+                                <div class="message-avatar">🤖</div>
+                                <div class="message-content typing">
+                                    <span class="typing-dot"></span>
+                                    <span class="typing-dot"></span>
+                                    <span class="typing-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-input-area">
+                            <input type="text" v-model="chatInput" 
+                                   placeholder="输入你的问题..." 
+                                   @keypress.enter="sendMessage"
+                                   :disabled="isTyping">
+                            <button class="primary-btn" @click="sendMessage" :disabled="isTyping || !chatInput.trim()">
+                                发送
+                            </button>
+                            <button class="secondary-btn" @click="clearChatHistory" v-if="chatHistory.length > 0">
+                                清空记录
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <section v-else-if="currentSection === 'settings'" key="settings" class="section active">
+                    <div class="section-header">
+                        <h1>⚙️ 系统设置</h1>
+                        <p class="subtitle">配置 AI 模型和个性化设置</p>
+                    </div>
+                    
+                    <div class="settings-container">
+                        <div class="settings-card">
+                            <h2>🤖 AI 模型配置</h2>
+                            <div class="form-group">
+                                <label>API Key</label>
+                                <input type="password" v-model="aiConfig.api_key" placeholder="输入你的 API Key">
+                            </div>
+                            <div class="form-group">
+                                <label>API 端点</label>
+                                <input type="text" v-model="aiConfig.api_endpoint" placeholder="https://api.openai.com/v1/chat/completions">
+                            </div>
+                            <div class="form-group">
+                                <label>模型名称</label>
+                                <input type="text" v-model="aiConfig.model" placeholder="gpt-3.5-turbo">
+                            </div>
+                            <div class="form-group">
+                                <label>系统提示词</label>
+                                <textarea v-model="aiConfig.system_prompt" rows="4" placeholder="设置 AI 的角色和行为..."></textarea>
+                            </div>
+                            <button class="primary-btn" @click="saveAIConfig">保存配置</button>
+                        </div>
+
+                        <div class="settings-card">
+                            <h2>📊 数据管理</h2>
+                            <div class="data-actions">
+                                <button class="secondary-btn" @click="exportData">导出数据</button>
+                                <button class="secondary-btn" @click="$refs.importFile.click()">导入数据</button>
+                                <input type="file" ref="importFile" accept=".json" style="display:none" @change="importData">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </transition>
+        </main>
+
+        <div v-if="showMethodModal" class="modal" @click.self="showMethodModal = false">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>{{ editingMethod ? '编辑方法' : '添加方法' }}</h2>
+                    <span class="close-btn" @click="closeMethodModal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>方法名称</label>
+                        <input type="text" v-model="methodForm.title" placeholder="例如：一起做饭">
+                    </div>
+                    <div class="form-group">
+                        <label>详细描述</label>
+                        <textarea v-model="methodForm.description" rows="3" placeholder="描述这个方法的具体内容..."></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>分类</label>
+                            <select v-model="methodForm.category">
+                                <option value="日常">日常</option>
+                                <option value="娱乐">娱乐</option>
+                                <option value="出行">出行</option>
+                                <option value="浪漫">浪漫</option>
+                                <option value="成长">成长</option>
+                                <option value="异地恋">异地恋</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>难度</label>
+                            <select v-model="methodForm.difficulty">
+                                <option value="简单">简单</option>
+                                <option value="中等">中等</option>
+                                <option value="困难">困难</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="secondary-btn" @click="closeMethodModal">取消</button>
+                    <button class="primary-btn" @click="saveMethod">保存</button>
+                </div>
+            </div>
+        </div>
+
+        <div v-if="showCaseModal" class="modal" @click.self="showCaseModal = false">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>{{ editingCase ? '编辑案例' : '添加案例' }}</h2>
+                    <span class="close-btn" @click="closeCaseModal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>案例标题</label>
+                        <input type="text" v-model="caseForm.title" placeholder="例如：第一次约会">
+                    </div>
+                    <div class="form-group">
+                        <label>详细内容</label>
+                        <textarea v-model="caseForm.content" rows="5" placeholder="记录这次交流的详细情况..."></textarea>
+                    </div>
+                    <div class="form-group" v-if="editingCase">
+                        <label>日期</label>
+                        <input type="date" v-model="caseForm.date">
+                    </div>
+                    <div class="form-group">
+                        <label>心情标签</label>
+                        <select v-model="caseForm.mood">
+                            <option value="开心">开心</option>
+                            <option value="感动">感动</option>
+                            <option value="温馨">温馨</option>
+                            <option value="有趣">有趣</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="secondary-btn" @click="closeCaseModal">取消</button>
+                    <button class="primary-btn" @click="saveCase">保存</button>
+                </div>
+            </div>
+        </div>
+
+        <div v-if="showNoteModal" class="modal" @click.self="showNoteModal = false">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>{{ editingNote ? '编辑注意事项' : '添加注意事项' }}</h2>
+                    <span class="close-btn" @click="closeNoteModal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>事项标题</label>
+                        <input type="text" v-model="noteForm.title" placeholder="例如：记住重要日期">
+                    </div>
+                    <div class="form-group">
+                        <label>详细说明</label>
+                        <textarea v-model="noteForm.content" rows="3" placeholder="详细描述这个注意事项..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>优先级</label>
+                        <select v-model="noteForm.priority">
+                            <option value="高">高</option>
+                            <option value="中">中</option>
+                            <option value="低">低</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="secondary-btn" @click="closeNoteModal">取消</button>
+                    <button class="primary-btn" @click="saveNote">保存</button>
+                </div>
+            </div>
+        </div>
+
+        <div v-if="showCountdownModal" class="modal" @click.self="showCountdownModal = false">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>{{ editingCountdown ? '编辑倒数日' : '添加倒数日' }}</h2>
+                    <span class="close-btn" @click="closeCountdownModal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>事件名称</label>
+                        <input type="text" v-model="countdownForm.name" placeholder="例如：恋爱纪念日">
+                    </div>
+                    <div class="form-group">
+                        <label>目标日期</label>
+                        <input type="date" v-model="countdownForm.date">
+                    </div>
+                    <div class="form-group">
+                        <label>类型</label>
+                        <select v-model="countdownForm.type">
+                            <option value="anniversary">纪念日</option>
+                            <option value="birthday">生日</option>
+                            <option value="date">约会</option>
+                            <option value="other">其他</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="secondary-btn" @click="closeCountdownModal">取消</button>
+                    <button class="primary-btn" @click="saveCountdown">保存</button>
+                </div>
+            </div>
+        </div>
+
+        <div v-if="toast.show" :class="['toast', toast.type]">{{ toast.message }}</div>
+
+        <nav class="bottom-nav">
+            <div class="bottom-nav-inner">
+                <div class="bottom-nav-item" :class="{ active: currentSection === 'home' }" @click="showSection('home')">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">首页</span>
+                </div>
+                <div class="bottom-nav-item" :class="{ active: currentSection === 'methods' }" @click="showSection('methods')">
+                    <span class="nav-icon">💝</span>
+                    <span class="nav-text">方法</span>
+                </div>
+                <div class="bottom-nav-item" :class="{ active: currentSection === 'cases' }" @click="showSection('cases')">
+                    <span class="nav-icon">📝</span>
+                    <span class="nav-text">案例</span>
+                </div>
+                <div class="bottom-nav-item" :class="{ active: currentSection === 'countdowns' }" @click="showSection('countdowns')">
+                    <span class="nav-icon">⏰</span>
+                    <span class="nav-text">倒数日</span>
+                </div>
+                <div class="bottom-nav-item" :class="{ active: currentSection === 'ai-chat' }" @click="showSection('ai-chat')">
+                    <span class="nav-icon">🤖</span>
+                    <span class="nav-text">AI助手</span>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
