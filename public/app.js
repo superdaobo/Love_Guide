@@ -6,14 +6,31 @@ let DEFAULT_DATA = null;
 
 async function loadDefaultData() {
     if (DEFAULT_DATA) return DEFAULT_DATA;
-    try {
-        const response = await fetch('default-data.json');
-        DEFAULT_DATA = await response.json();
-        return DEFAULT_DATA;
-    } catch (e) {
-        console.error('加载默认数据失败:', e);
-        return { methods: [], cases: [], notes: [], countdowns: [] };
+    
+    const paths = [
+        'default-data.json',
+        './default-data.json',
+        '/default-data.json',
+        'public/default-data.json',
+        './public/default-data.json'
+    ];
+    
+    for (const path of paths) {
+        try {
+            console.log('尝试加载:', path);
+            const response = await fetch(path);
+            if (response.ok) {
+                DEFAULT_DATA = await response.json();
+                console.log('成功加载默认数据:', path, DEFAULT_DATA.methods?.length, 'methods');
+                return DEFAULT_DATA;
+            }
+        } catch (e) {
+            console.log('加载失败:', path, e.message);
+        }
     }
+    
+    console.error('所有路径都无法加载默认数据');
+    return { methods: [], cases: [], notes: [], countdowns: [] };
 }
 
 function getLocalData(key) {
