@@ -1,4 +1,4 @@
-const { createApp, ref, computed, onMounted, nextTick } = Vue;
+const { createApp, ref, computed, onMounted, nextTick, watch } = Vue;
 
 const USE_API = window.location.hostname.includes('localhost') || window.location.hostname.includes('127.0.0.1');
 
@@ -177,7 +177,7 @@ createApp({
             }
         };
 
-        const loadMethods = async () => {
+        const loadMethods = async (defaultData = null) => {
             if (USE_API) {
                 try {
                     const response = await axios.get('/api/methods');
@@ -190,13 +190,14 @@ createApp({
                 if (saved) {
                     methods.value = saved;
                 } else {
-                    const defaultData = await loadDefaultData();
-                    methods.value = defaultData.methods || [];
+                    const data = defaultData || await loadDefaultData();
+                    methods.value = data.methods || [];
+                    setLocalData('love_methods', methods.value);
                 }
             }
         };
 
-        const loadCases = async () => {
+        const loadCases = async (defaultData = null) => {
             if (USE_API) {
                 try {
                     const response = await axios.get('/api/cases');
@@ -209,13 +210,14 @@ createApp({
                 if (saved) {
                     cases.value = saved;
                 } else {
-                    const defaultData = await loadDefaultData();
-                    cases.value = defaultData.cases || [];
+                    const data = defaultData || await loadDefaultData();
+                    cases.value = data.cases || [];
+                    setLocalData('love_cases', cases.value);
                 }
             }
         };
 
-        const loadNotes = async () => {
+        const loadNotes = async (defaultData = null) => {
             if (USE_API) {
                 try {
                     const response = await axios.get('/api/notes');
@@ -228,13 +230,14 @@ createApp({
                 if (saved) {
                     notes.value = saved;
                 } else {
-                    const defaultData = await loadDefaultData();
-                    notes.value = defaultData.notes || [];
+                    const data = defaultData || await loadDefaultData();
+                    notes.value = data.notes || [];
+                    setLocalData('love_notes', notes.value);
                 }
             }
         };
 
-        const loadCountdowns = async () => {
+        const loadCountdowns = async (defaultData = null) => {
             if (USE_API) {
                 try {
                     const response = await axios.get('/api/countdowns');
@@ -247,8 +250,9 @@ createApp({
                 if (saved) {
                     countdowns.value = saved;
                 } else {
-                    const defaultData = await loadDefaultData();
-                    countdowns.value = defaultData.countdowns || [];
+                    const data = defaultData || await loadDefaultData();
+                    countdowns.value = data.countdowns || [];
+                    setLocalData('love_countdowns', countdowns.value);
                 }
             }
         };
@@ -834,14 +838,26 @@ createApp({
         };
 
         onMounted(async () => {
-            await Promise.all([
-                loadMethods(),
-                loadCases(),
-                loadNotes(),
-                loadCountdowns(),
-                loadAIConfig(),
-                loadChatHistory()
-            ]);
+            if (!USE_API) {
+                const defaultData = await loadDefaultData();
+                await Promise.all([
+                    loadMethods(defaultData),
+                    loadCases(defaultData),
+                    loadNotes(defaultData),
+                    loadCountdowns(defaultData),
+                    loadAIConfig(),
+                    loadChatHistory()
+                ]);
+            } else {
+                await Promise.all([
+                    loadMethods(),
+                    loadCases(),
+                    loadNotes(),
+                    loadCountdowns(),
+                    loadAIConfig(),
+                    loadChatHistory()
+                ]);
+            }
             loadStats();
             isLoading.value = false;
         });
